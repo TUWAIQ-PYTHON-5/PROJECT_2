@@ -1,0 +1,95 @@
+{% extends "main/index.html" %}
+{% load static %}
+
+{% block title %} Gym {% endblock %}
+
+
+{% block content %}
+
+<section class="aboutus" id="aboutus">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <div class="heading">
+      <h2 class="animate__animated animate__fadeInUp">WELCOME TO GYM PAGE !</h2>
+      <h3 class="animate__animated animate__fadeInUp">I am interested in sports, especially the club.</h3>        
+    </div>
+    </div> 
+     </div> 
+    <div class="row">
+    <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="{%  static 'images/gym2.jpg' %}" alt=""></div>
+      <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
+        <br><br><br><br>
+        <h3 class="animate__animated animate__fadeInUp">My journey in the world of sports :</h3>
+          <!-- <h4>Information Systems &amp; Full Stack Developer</h4> -->
+          
+          <p class="animate__animated animate__fadeInUp"><br><br><h4>I started in the world of sports in 2020, I loved it and felt a different world, I became happy, light, slim body and better health. </h4></p>      </div>
+      
+    </div>     
+  </div>    
+</section>
+
+<section class="aboutus" id="section mt-3">
+  <div class="container mt-5">
+    <div class="row">
+     <div class="col-md-12">
+ 
+    </div> 
+     </div> 
+    <div class="row">
+      
+      <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right media">
+      <p class="animate__animated animate__fadeInUp"><h5><br><br><br> I wanted to become an online personal trainer and I did it!</h5></p>
+      </div>
+      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left media"><img src="{%  static 'images/gym1.jpg' %}" alt=""></div>
+
+    </div>     
+  </div>    
+</section>
+
+
+<section class="contact" id="contact" style="background-color: rgb(244, 244, 244);">
+  <div class="container">
+    <div class="heading">
+      <h2 class="animate__animated animate__fadeInUp">I'll show you some before and after experiences of my subscribers</h2>
+    </div>
+  </div>
+       
+</section>
+<!-- photos bar -->
+
+<section class="protfolio" id="ourwork">
+  <br> <br>
+    <div class="row">
+      <div class="portfolioFilter">
+        <ul>
+          <li><a href="#" data-filter="*" class="current">All</a></li>
+        </ul>
+      </div>
+      <ul class="portfolioContainer row">
+      <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/1.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-plus fa-2x"></i></a> </span> </span> <img src="{% static 'images/projects/thumb-images/gt1.jpg' %}" alt="" > </div>
+        </li>
+        <li class="template wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/1.jpg' %}" alt="" > </div>
+        </li>
+        <li class="wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/2.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/2.jpg' %}" alt="" > </div>
+        </li>
+      </ul>
+    </div>
+    <br><br>
+  </section>
+
+<!--  my goals  -->
+<section class="contact" id="contact" style="background-color: rgb(244, 244, 244);">
+  <div class="container">
+    <div style="text-align: center;">
+      <h1>,,</h1>
+
+      <h2 class="animate__animated animate__fadeInUp" >My Goal is to make health and fitness accessible to all by providing workout programs and recipes with subscribers.</h2>
+    </div>
+  </div>
+</section>
+
+  {% endblock %}

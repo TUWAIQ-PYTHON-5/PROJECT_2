@@ -1,0 +1,516 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- Metas Page details-->
+<title>{% block title %}DOHA DAJAM PERSONAL WEBSITE{% endblock %}</title>
+<meta name="description" content="OnePage Resume Portfolio">
+<meta name="author" content="">
+<!-- Mobile Specific Metas-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--main style 12-->
+<link rel="stylesheet" type="text/css" media="screen" href="{%  static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{%  static 'css/main.css' %}">
+<!--google font style-->
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+<!--font-family: 'Metrophobic', serif;-->
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,400italic,600italic' rel='stylesheet' type='text/css'> 
+<!--font-family: 'Open Sans', sans-serif;-->
+<!-- font icon css style-->
+<link rel="stylesheet" href="{%  static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<link rel="stylesheet" href="{%  static 'css/lightbox.min.css' %}">
+<link rel="stylesheet" href="{%  static 'css/jquery-ui-1.8.16.custom.css' %}">
+<link rel="stylesheet" href="{%  static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{%  static 'css/animate.css' %}">
+
+
+
+
+<link rel="stylesheet" href="{%  static 'css/main.css' %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body onLoad="load()" onUnload="GUnload()">
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status"></div>
+</div>
+<!--wrapper start-->
+<div class="wrapper noGap" id="wrapper">
+
+<!--Header start -->
+<header>
+  	<!--menu start-->
+    <div class="menu">
+    <a href="#" class="nav-icon" id="nav-show"><i class="fa fa-bars"></i></a>
+      <div class="navbar-wrapper">
+        <div class="container">
+          <div class="navwrapper">
+            <div class="navbar navbar-inverse navbar-static-top">
+              <div class="container">
+              	<!--<div class="logo">logo</div> -->
+                <div class="navArea"><a href="#" class="closeMenu"><i class="fa fa-times"></i></a>
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                     <!-- <a class="navbar-brand" href="#">Menu</a>  --></div>
+                    <div class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li class="menuItem active"><a href="/">Home</a></li>
+                        <li class="menuItem"><a href="{% url 'main:index_page' %}#aboutus">About Me</a></li>
+                        <li class="menuItem"><a href="#skillset">Skills</a></li>
+                        <li class="menuItem"><a href="#experience">Experience</a></li>
+                        <li class="menuItem"><a href="#education">Education</a></li>
+                        <li class="menuItem"><a href="#ourwork">MY SERVICES</a></li>
+                        <li class="menuItem"><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Navbar -->
+        </div>
+      </div>
+    </div>
+    <!--menu end--> 
+    <!--banner start-->
+    <div class="banner row" id="banner">
+    <div class="bannerText">
+        <h1 class="animate__animated animate__fadeInUp">I'm Doha Dajam </h1>
+        <h3 class="animate__animated animate__fadeInUp">Information Systems &amp; Full Stack Developer</h3>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%"> 
+        <!--background slide show start-->
+        <div class="slide"> 
+          <img src="{%  static 'images/header-image/Doha.jpeg' %}" alt="Doha img"> </div>
+        <div class="slide"> 
+          <img src="" alt=""> </div>
+        <!--background slide show end--> 
+      </div>
+    </div>
+    <!--banner end--> 
+    
+  </header>
+  <!--Header end -->
+  {% block content %}
+ <!--about us start-->
+  <section class="aboutus" id="aboutus">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+      	<div class="heading">
+        <h2 class="animate__animated animate__fadeInUp">About me</h2>
+        <h3 class="animate__animated animate__fadeInUp">A small introduction about myself</h3>        
+      </div>
+      </div> 
+       </div> 
+      <div class="row">
+      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="{%  static 'images/D2.png' %}" alt=""></div>
+      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
+        	<h5 class="animate__animated animate__fadeInUp">Doha Saad Dajam</h5>
+            <h4 class="animate__animated animate__fadeInUp">Information Systems &amp; Full Stack Developer</h4>
+            <p class="animate__animated animate__fadeInUp">I always looking to learn new skills, hope to offer best practice, and delivering exceptional results.</p>
+            <p class="animate__animated animate__fadeInUp">I live in Saudi Arabia, with my family and my pet (Leno) too. 
+
+              I believe in prioritising my life, my health, and my relationships more than I do my work. 
+              
+              My favourite book is The Power of Habit by Charles Duhigg.
+              and I love listen to  Finjan podcast With Abdul Rahman Abu Maleh.
+              </p>
+              <p><a href="{% static 'file/Doha_Dajam_2023.pdf' %}" role="button" class="btn btn-primary btn-lg">Download Printable Resume</a></p>
+        </div>
+      	
+      </div>     
+    </div>    
+  </section>
+  <!--about us end--> 
+  <!--Skillset start -->
+  <section id="skillset" class="skillset" style="background-color: rgb(244, 244, 244);">
+  	<div class="container">
+    	<div class="row">
+        	<div class="col-md-12">
+               <div class="heading">
+                <h2 class="animate__animated animate__fadeInUp">Skills &amp; Expertice</h2>
+                <h3 class="animate__animated animate__fadeInUp">I can say i’m quite good at</h3>        
+              </div>
+            </div>
+            <div class="col-md-12">
+            	<div class="col-md-6 col-sm-12 media">
+                	<p class="animate__animated animate__fadeInUp"><br><br><br><br><br><br> Back and Front end developer, I create web pages and have a lot of experience dealing with Python, Django, Git & Github, Sqlite, Systems analysis, HTML and CSS.
+                  </p>
+                </div>
+                <div class="col-md-6 col-sm-12">                
+                  <div class="skillbar clearfix " data-percent="94%">
+                      <div class="skillbar-title"><span>Web design</span></div>
+                      <div class="skillbar-bar"></div>
+                      <div class="skill-bar-percent"></div>
+                  </div> <!-- End Skill Bar -->
+
+
+                <div class="skillbar clearfix " data-percent="85%">
+                  <div class="skillbar-title"><span>Python</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent"></div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="85%">
+                <div class="skillbar-title"><span>Django</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+               </div> <!-- End Skill Bar -->
+                
+               <div class="skillbar clearfix " data-percent="85%">
+                <div class="skillbar-title"><span>Git & GitHub</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+                </div> <!-- End Skill Bar -->
+
+                <div class="skillbar clearfix " data-percent="85%">
+                    <div class="skillbar-title"><span>SQLite</span></div>
+                    <div class="skillbar-bar"></div>
+                    <div class="skill-bar-percent"></div>
+                </div> <!-- End Skill Bar -->
+                
+                <div class="skillbar clearfix " data-percent="95%">
+                    <div class="skillbar-title"><span>Systems Analysis</span></div>
+                    <div class="skillbar-bar"></div>
+                    <div class="skill-bar-percent"></div>
+                </div> <!-- End Skill Bar -->
+                
+                <div class="skillbar clearfix " data-percent="50%">
+                    <div class="skillbar-title"><span>CSS</span></div>
+                    <div class="skillbar-bar"></div>
+                    <div class="skill-bar-percent"></div>
+                </div> <!-- End Skill Bar -->  
+                
+            
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--Skillset end -->
+  <!--Work Experties start -->
+  <section id="experience" class="myexperties">
+  	<div class="container">
+        <div class="heading">
+        <h2 class="animate__animated animate__fadeInUp">Work Experience</h2>
+        <h3 class="animate__animated animate__fadeInUp">My previous associations</h3>        
+      </div>
+        
+        <div class="row media">
+        	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            	<div class="expertiesico animate__animated animate__fadeInUp">
+                Jan,2023<br>Mar,2023
+                </div>
+            </div>
+        	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            	<h4 class="animate__animated animate__fadeInUp">Full Stack Developer</h4>
+                <h5 class="animate__animated animate__fadeInUp">Tuwaiq Academy | SAFCSP</h5>
+                <p class="animate__animated animate__fadeInUp"><br>
+                  Python Developer Bootcamp - Back-End & Front-End web Development.
+                  <br><br>
+                </p>
+            </div>
+        </div>
+        <div class="row media">
+        	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            	<div class="expertiesico animate__animated animate__fadeInUp">
+                Dec,2022<br>Mar,20222
+
+                </div>
+            </div>
+        	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            	<h4 class="animate__animated animate__fadeInUp">IT</h4>
+                <h5 class="animate__animated animate__fadeInUp">Maternity and Children Hospital</h5>
+                <p class="animate__animated animate__fadeInUp"> <br>
+                  Maternity and Children Hospital, Children's hospital in Khamis Mushait .
+                  <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--Work Experties end -->
+  <!--Education & diploma start -->
+  <section id="education" class="educationdiploma" style="background-color: rgb(244, 244, 244);">
+  	<div class="container">
+        <div class="heading">
+        <h2 class="animate__animated animate__fadeInUp">Education &amp; Diplomas</h2>
+        <h3 class="animate__animated animate__fadeInUp">I can say i’m quite good at</h3>        
+      </div>
+        
+        <div class="row media">
+        	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            	<div class="expertiesico animate__animated animate__fadeInUp">
+                Jan,2017<br>Nov 2022
+
+                </div>
+            </div>
+        	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            	<h4 class="animate__animated animate__fadeInUp">Bachelor of Information Systems </h4>
+                <h5 class="animate__animated animate__fadeInUp">King khalid University</h5>
+                <p class="animate__animated animate__fadeInUp"><br><br>
+                 Graduated with second honors .
+                <br><br>
+                </p>
+            </div>
+        </div>
+        <div class="row media">
+        	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            	<div class="expertiesico animate__animated animate__fadeInUp">
+                Oct,2021<br>
+                </div>
+            </div>
+        	<div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            	<h4 class="animate__animated animate__fadeInUp">Diploma in Cybersecurity</h4>
+                <h5 class="animate__animated animate__fadeInUp">Center of the Abha Chamber of Commerce and Industry</h5>
+                <p class="animate__animated animate__fadeInUp"><br>
+                  Center of the Abha Chamber of Commerce and Industry is witnessing in
+                  cooperation with Cisco Academy . 
+                  (six months ) with an average of 170 hours on
+                  19/10/2021 and optained a grade of excellent by 100% .
+                  </p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--Education & diploma end -->
+  
+  
+  <!--portfolio start-->
+	<section class="protfolio" id="ourwork">
+    <div class="container">
+        <div class="heading">
+            <h2 class="animate__animated animate__fadeInUp">My services</h2>
+            <h3 class="animate__animated animate__fadeInUp">What I have done in my academic career</h3>   
+            <section class="main-content">
+              <div class="container">
+                <br><br>
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="profile-card bg-white shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+                      <div class="profile-card_image">
+                        <img src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top mb-4 shadow" alt="...">
+                      </div>
+                      <div class="profile-card_details">
+                        <br>
+                        <h3 class="mb-0">Gym</h3>
+                        <hr>
+                        <p class="text-muted">Are you looking for some awesome bodyweight workouts? All you need is Workout Trainer! Whether you like working out using just your body weight or with minimal equipment, Let's get a fresh start this NEW YEAR!!!</p>
+                      </div>
+                                  <div class="profile-card_social text-center p-4">
+                                      <a href="{% url 'main:gym_page' %}" class="btn btn" style="background-color: rgb(82, 68, 83);">Let's get a fresh start!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="profile-card bg-white shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+                      <div class="profile-card_image">
+                        <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top mb-4 shadow" alt="...">
+                      </div>
+                      <div class="profile-card_details">
+                        <br>
+                        <h3 class="mb-0">Website development</h3>
+                        <hr>
+                        <p class="text-muted">I am a professional web designer developer. My code is hand written and well documented. Every website I develop uses the latest development principles and techniques to meet modern web standards. Feel free to contact me, Cheers!</p>
+                      </div>
+                                  <div class="profile-card_social text-center p-4">
+                                      <a href="{% url 'main:web_page' %}" style="background-color: rgb(82, 68, 83);" class="btn btn">You’ve come to the right place!</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="profile-card bg-white shadow mb-4 text-center rounded-lg p-4 position-relative h-100">
+                      <div class="profile-card_image">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" class="card-img-top mb-4 shadow" alt="...">
+                      </div>
+                      <div class="profile-card_details">
+                        <br>
+                        <h3 class="mb-0">Graphic design</h3>
+                        <hr>
+          
+                        <p class="text-muted">I am a designer and i am good at creating innovative and designs . A strong focus on color and its impact on customers is the central part of my work. I follow trendy design, so I know what to do and how to make it both beautiful and appealing.</p>
+                      </div>
+                      <div class="profile-card_social text-center p-4">
+                      <a href="{% url 'main:graphic_page' %}" class="btn btn" style="background-color: rgb(82, 68, 83);" >Let's make Art!</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </section>         
+        </div>
+    </div>
+
+  <br> <br>
+  </section>
+
+
+
+  
+  <!--contact start-->
+  <section class="contact" id="contact" style="background-color: rgb(244, 244, 244);">
+    <div class="container">
+      <div class="heading">
+        <h2 class="animate__animated animate__fadeInUp">Get In Touch</h2>
+        <h3 class="animate__animated animate__fadeInUp">I’m currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</h3>       
+      </div>
+    </div>
+    <!--google map start-->
+    <div class="row mapArea">
+     <div id="map" style="width: 100%; height: 100%"></div> 
+    </div> 
+    <!--google map end--> 
+  </section>
+  <section class="contactDetails">
+    <div class="container"> 
+    <div class="heading">
+        <h2>Drop a email</h2>
+        <h3>Please feel free if you would like to have a chat.</h3>       
+      </div>
+      <!--contact form start-->
+      {% block contact %}
+      <div class="row media">      	 
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 conForm text-center">
+        <div id="message"></div>
+        <form method="POST" action="" name="cform" id="cform">
+          {% csrf_token %}
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" placeholder="Your name" >
+          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-8 col-lg-8 noMarr" placeholder="Your email" >
+          <textarea name="content" id="content" cols="" rows="" class="col-xs-12 col-sm-12 col-md-8 col-lg-8" placeholder="Your message"></textarea>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><input type="submit" id="submit" name="send" class="submitBnt" value="Say Hello!"></div>
+          <div id="simple-msg"></div>
+        </form>
+      </div>
+      </div>
+      <!--contact form end--> 
+    </div>
+  </section>
+  {% endblock %}  
+  <!--contact end--> 
+  {% endblock %}
+
+  <!--footer start--> 
+  <section class="footer" id="footer" style="background-color: rgb(244, 244, 244);">
+    <div class="container">
+      <ul>
+        <li><a href="#"><i class="fa fa-twitter fa-2x "></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/doha-dajam/"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      </ul>
+    </div>
+    <p class="text-center"><a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2"></i></a></p>
+  </section>
+  <!--footer end-->     
+  </div>
+<!--wrapper end--> 
+
+<!--modernizr js--> 
+<script type="text/javascript" src="{%  static 'js/modernizr.custom.26633.js' %}"></script> 
+<!--jquary min js--> 
+<script type="text/javascript" src="{%  static 'js/jquery.min.js' %}"></script> 
+<script src="{%  static 'js/bootstrap.min.js' %}"></script> 
+
+<!--for placeholder jquery--> 
+<script type="text/javascript" src="{%  static 'js/jquery.placeholder.js' %}"></script> 
+
+<!--for header jquery--> 
+<script type="text/javascript" src="{%  static 'js/stickUp.js' %}"></script> 
+<script src="{%  static 'js/jquery.superslides.js' %}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready( function() {
+  //enabling stickUp on the '.navbar-wrapper' class
+	$('.navbar-wrapper').stickUp({
+		parts: {
+		  0: 'banner',
+		  1: 'aboutus',
+		  2: 'skillset',
+		  3: 'experience',
+		  4: 'education',
+		  5: 'ourwork',
+		  6: 'contact'
+		},
+		itemClass: 'menuItem',
+		itemHover: 'active',
+		topMargin: 'auto'
+		});
+	});
+	
+
+});
+</script>
+<script>
+	$('#banner').superslides({
+	  animation: 'fade',
+	  play: 5000
+	});
+</script>  
+
+<!--for portfolio jquery--> 
+<script src="{%  static 'js/jquery.isotope.js' %}" type="text/javascript"></script> 
+<link type="text/css" rel="stylesheet" id="theme" href="{%  static 'css/jquery-ui-1.8.16.custom.css' %}">
+<link type="text/css" rel="stylesheet" href="{%  static 'css/lightbox.min.css' %}">
+<script type="text/javascript" src="{%  static 'js/jquery.ui.widget.min.js' %}"></script> 
+<script type="text/javascript" src="{%  static 'js/jquery.ui.rlightbox.js' %}"></script> 
+
+<!--contact form js--> 
+<!--<script type="text/javascript" src="{%  static 'js/jquery.contact.js' %}"></script> -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+					scrollwheel: false,
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+				
+				
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    map: map,
+                    title: 'Hello!'
+                });
+            }
+        </script>
+
+<script src="{%  static 'js/jquery.easing.js' %}"></script> 
+<script src="{%  static 'js/jquery.mousewheel.js' %}"></script> 
+<script defer src="{%  static 'js/slideroption.js' %}"></script> 
+
+<!--for theme custom jquery--> 
+<script src="{%  static 'js/custom.js' %}"></script>
+</body>
+</html>
