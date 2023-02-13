@@ -1,16 +1,97 @@
 {% extends "main/base.html" %}
+{% load static %}
 
 {% block title %} About {% endblock %}
 
 {% block content %}
 
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-6 text-center m-5 text-white">
-      <h1 class="font-weight-bold mt-sm-5">About</h1>
-      <hr class="hr-light">
-      <h5 class="mb-4">Here you can see my About</h5>
+
+<!-- ======= About Section ======= -->
+<div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="{% static 'img/me.jpg' %}" class="img-responsive" alt="me">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+            <p class="p-heading">I'm a Computer Engineer that always look for ways to expand my knowledge & experience with every opportunity.
+              With ceruse mind I learn something from every field to look outside the box.</p>
+            <p class="separator">Always searching for the opportunity to gain more knowledge and experience.
+               Skilled in Python (Programming Language), Electrical Troubleshooting and problem solving.</p>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-{% endblock %}
+  </div><!-- End About Section -->
+  <!-- ======= Services Section ======= -->
+  <div id="services">
+    <div class="container">
+
+      <div class="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-tools"></i>
+              <span>Troubleshooting</span>
+              <p class="separator">To analyse and solve serious problems is key to success.</p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-terminal"></i>
+              <span>Programming</span>
+              <p class="separator">Working the different  Programming Languages, I've gain the skills to work in most programming environment. </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-window"></i>
+              <span>Full-Stack Web Developer</span>
+              <p class="separator">Having the ability to develop both client and server software. </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-lightbulb"></i>
+              <span>Critical Thinking</span>
+              <p class="separator">Observing the objective analysis and evaluation of an issue in order to form a judgement. </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-book"></i>
+              <span>Fast Learner</span>
+              <p class="separator">Having to develop a consistent habits that train the brain to learn. </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-people"></i>
+              <span>Teamwork</span>
+              <p class="separator">To have worked with people together that have a common goal with the most effective and efficient way.</p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </div><!-- End Services Section -->
+
+  {% endblock %}

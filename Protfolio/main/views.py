@@ -12,9 +12,9 @@ def about_page(request : HttpRequest):
     
     return render(request, 'main/about.html')
 
-def freelancing_page(request : HttpRequest):
+def projects_page(request : HttpRequest):
     
-    return render(request, 'main/freelancing.html')
+    return render(request, 'main/projects.html')
 
 def contact_page(request : HttpRequest):
     

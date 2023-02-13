@@ -1,29 +1,23 @@
 {% extends "main/base.html" %}
+{% load static %}
 
 {% block title %} Elyas Balgasim {% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-6 text-center m-5 text-white">
-      <br>
-      <h1 class="font_0" style="line-height:1em; text-align:center; font-size:151px;"><span style="letter-spacing:0.15em;">ELYAS</span></h1>
-      <hr class="hr-light">
-      <h5 class="mb-4"></h5>
+
+
+<div id="hero" class="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>I'm <span class="typed" data-typed-items="Elyas Balgasim, an Engineer, a Developer, an Entrepreneur, a Programmer"></span></h1>
+      <p>Engineer, Developer, Entrepreneur, Programmer</p>
+      <ul class="list-unstyled list-social">
+        <li><a href="https://github.com/ZeNullOrb"><i class="bi bi-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/elyas-balgasim/"><i class="bi bi-linkedin"></i></a></li>
+      </ul>
     </div>
   </div>
 </div>
-
-
-<div>
-    <p class="font_1" style="text-align:center; font-size:20px;"><span style="letter-spacing:0.15em;">Computer Engineer</span></p>
-</div>
-
-
-
-
-
-
 
 
 {% endblock %}
