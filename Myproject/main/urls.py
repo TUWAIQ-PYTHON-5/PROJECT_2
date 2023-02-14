@@ -9,10 +9,6 @@ urlpatterns = [
     path('', views.index_page, name="index_page"),
     path('contact/', views.contact_me, name="contact"),
     path('journey/', views.my_journey, name="journey"), 
- 
- 
-   
-
 
    
 ]

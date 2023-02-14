@@ -18,14 +18,8 @@ def index_page(request : HttpRequest):
  
 def index(request : HttpRequest):
     comments=Comment.objects.all()
-    return render(request, 'faiapp/index.html', {"comments":comments})
-    
-def gallery(request: HttpRequest):
-    if request.method == "POST":
-        new_comment = Comment(Name = request.POST["Name"], your_comment = request.POST["your_comment"])
-        new_comment.save()
-        return redirect("main:journey")
-    return render(request, "main/journey.html")
+    return render(request, 'main/index.html', {"comments":comments})
+
 
 def contact_me (request : HttpRequest):
 
@@ -34,5 +28,8 @@ def contact_me (request : HttpRequest):
 
 
 def my_journey (request : HttpRequest):
-
+    if request.method == "POST":
+        new_comment = Comment(Name = request.POST["Name"], your_comment = request.POST["your_comment"])
+        new_comment.save()
+        return redirect("main:journey")
     return render (request,"main/journey.html")
