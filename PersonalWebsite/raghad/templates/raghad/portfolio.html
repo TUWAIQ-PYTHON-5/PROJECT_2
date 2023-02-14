@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghad's portfolio</title>
+    {% load static %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Mirza&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Mirza&family=Neucha&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+
+body{ 
+     color: rgb(12, 7, 7);
+     background-color: rgba(197, 161, 158, 0.56);
+      font-family: 'Courgette', cursive; }
+
+.footer{ position:absolute;
+   bottom:0;
+   width:100%;
+   height:55px;  
+   }
+
+h1,h2,h3,h4,h5,h6{font-family: 'Neucha', cursive;}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("{% static 'images/photo.jpeg' %}");
+  min-height: 100%;
+}
+</style>
+</head>
+<body>
+    
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+    <div class="bgimg"></div>
+</nav>
+  
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:40%">
+  
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+      <h1 class="w3-jumbo"><b>Raghad</b></h1>
+      <p> web developer .</p>
+    </header>
+  
+    <!-- Portfolio Section -->
+    <div class="w3-padding-32 w3-content" id="portfolio">
+      <h2 class="w3-text-grey">My Portfolio</h2>
+      <hr class="w3-opacity">
+  
+      <!-- Grid for photos -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="{% static 'images/SMC.png' %}" style="width:200%">
+          <img src="{% static 'images/Copy.jpg' %}" style="width:200%">
+        </div>
+  
+        
+      <!-- End photo grid -->
+      </div>
+    <!-- End Portfolio Section -->
+    </div>
+  
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2>About me </h2>
+      <hr class="w3-opacity">
+      <p> I am a programmer and cyber security student who loves to interact with the computer ,I  specialize in creating , developing websites in Riyadh City</p>
+      <h3 class="w3-padding-16">My Skills</h3>
+      <p class="w3-wide">python language</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:77%">77%</div>
+      </div>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:81%">81%</div>
+      </div>
+      
+      <p class="w3-wide">Html and CSS</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide">SQL</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:75%">75%</div>
+      </div>
+      <p class="w3-wide">Java language</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:83%">83%</div>
+      </div>
+
+  
+    
+    </div>  
+    
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+     <a href=""> <i class="fa fa-telegram w3-hover-opacity"></i></a>
+      <a href="https://www.linkedin.com/in/raghad-nasser-21047123a/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    <!-- End footer -->
+    </footer>
+    
+  <!-- END PAGE CONTENT -->
+  </div>
+
+</body>
+</html>

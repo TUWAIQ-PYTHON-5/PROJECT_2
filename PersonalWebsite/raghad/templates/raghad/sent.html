@@ -1,0 +1,37 @@
+{%extends 'raghad/base.html'%}
+{% load static %}
+
+
+{% block title %}  sent {% endblock %}
+
+
+{% block content%}
+<head></head>
+<style>
+    .btn{ 
+   margin-left: 230px;
+}
+.container1{ padding-top: 5%;}
+.img1{width: 7%;
+height: 7%;
+margin-left: 540px;}
+
+</style>
+ 
+<div class="container1">
+    <img class="img1" src="{% static 'images/correct.png' %}" alt="">
+    
+    <p>
+    <button class="btn"class="mx-auto" style="width: 700px;height: 100px; font-size: x-large; background-color: rgba(53, 36, 46, 0.342);" class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+      Thank you {{client_fname.first_name}}
+    </button>
+  </p>
+  <div  style="min-height: 120px; margin-left: 230px;">
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div  class="card card-body" style="width: 700px;">
+        Your information has been submitted and 
+        we will contact you as soon as possible .</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

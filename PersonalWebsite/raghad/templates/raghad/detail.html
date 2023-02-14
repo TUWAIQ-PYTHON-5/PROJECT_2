@@ -1,0 +1,39 @@
+{%extends 'raghad/base.html'%}
+{% load static %}
+
+
+{% block title %}  Sign up details{% endblock %}
+
+
+{% block content%}
+<head><link href="https://fonts.googleapis.com/css2?family=Courgette&family=Mirza&family=Neucha&display=swap" rel="stylesheet">
+</head>
+<br>
+<style>
+  #font{font-family: 'Neucha', cursive;}
+</style>
+
+<div class="container py-5">
+    <h2 style="font-family: 'Neucha', cursive;"> Thank you for signing up we will send you an email as soon as possible.<br>Your information below have been sent.
+    </h2>
+<hr>
+    <div class="row ">
+        <div class="card" style="width: 500px; height: 150px; background-color: rgba(247, 247, 246, 0.418); margin-left: 25%; text-align:left;">
+            <div  class="card-body" style="color: rgba(73, 50, 50, 0.996);">
+              <h3 id="font" class="card-title">Full name :  {{ info.full_name}}</h3>
+              <h3 id="font" class="card-text">Email :   {{info.email}}</h3>
+              <h3 id="font" class="card-text">Phone number :  {{info.phone_number}}</h3>
+
+            </div>
+          </div> 
+        </div>
+    <br><br>
+
+
+          
+<br>
+
+
+
+
+{% endblock %}
