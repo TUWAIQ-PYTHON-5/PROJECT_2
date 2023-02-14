@@ -1,0 +1,67 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %} achievements {% endblock %}
+
+{% block content %}
+<style>
+    .card-group{
+      text-align: center;
+      padding: 50px 40px 40px 40px;
+    }
+  </style>
+
+
+
+<div class="card-group">
+    <div class="card">
+        <img src="{% static 'images/legoo.jfif' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">منافسة الربوتات عام 2015</h5>
+        <p class="card-text">منافسة تُقام سنوياً بين مدارس المدينة الواحدة،او على مستوى المملكة.</p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/عمادة.jpeg' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">المشاركة في عمادة الجامعة على مدار سنة ونصف</h5>
+        <p class="card-text">عمادة شؤون الطلاب هي عمادة جامعية توّفر مطالب الطلاب </p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/التأسيس.jpeg' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">المشاركة تطوعياً في يوم التأسيس</h5>
+        <p class="card-text">فعالية تم تنظيمها من قبل الجامعة وتمت المشاركة فيها تطوعياً</p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/الابتكار.jpeg' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">المشاركة تطوعياً في تنظيم ملتقى السياحة والابتكار</h5>
+        <p class="card-text">ملتقى السياحة والابتكار الاول في مدينة تبوك والذي تم تنظيمه من قبل الجامعة</p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/موهبة.jpg' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">حصولي على المركز الثاني على مستوى المدينة</h5>
+        <p class="card-text">اختبار موهبة اختبار مقدّم من وزارة التعليم في العلوم والرياضيات</p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/taqat.jpeg' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">حصول فكرة مبادرتي على المركز 11 ضمن 100 مبادرة</h5>
+        <p class="card-text">خلال برنامج بوصلة طاقات الذي استمر لمدة 6 شهور </p>
+      </div>
+    </div>
+    <div class="card">
+        <img src="{% static 'images/taq.jpeg' %}" alt="">
+      <div class="card-body">
+        <h5 class="text-primary" class="card-title">مشاركة في برنامج بوصلة طاقات</h5>
+        <p class="card-text">خلال برنامج بوصلة طاقات الذي استمر لمدة 6 شهور </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
