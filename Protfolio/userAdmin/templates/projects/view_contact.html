@@ -14,6 +14,7 @@
                         <h6>Email: {{ contact.email }}</h6>
                         <h6>Subject: {{ contact.subject }}</h6>
                         <h6>Message: {{ contact.message }}</h6>
+                        <a href="{% url 'userAdmin:delete_contact' contact.id %}" class="btn btn-danger p-1 h-25 ">Delete</a>
                     </div>
                 </div>
             {% endfor %}

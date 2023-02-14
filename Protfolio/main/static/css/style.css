@@ -86,6 +86,7 @@ p {
   text-transform: uppercase;
 }
 
+
 .btn:hover,
 .btn:focus {
   color: #fff;
@@ -103,6 +104,9 @@ p {
   font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+.form-group{
+  background-color: dark;
 }
 
 .form-control {
@@ -832,15 +836,16 @@ p {
 .journal-block .journal-info .journal-txt {
   padding: 25px 0px;
   position: relative;
+  background-color: rgba(49, 49, 49, 0.9);
 }
 
 .journal-block .journal-info .journal-txt h4 a {
   display: block;
   font-size: 19px;
   line-height: 24px;
-  margin: 0 0 13px 0;
+  margin: 0 0 13px 8px;
   font-weight: 500;
-  color: #ffffff;
+  color: white;
   transition: all 0.5s ease-in-out 0s;
 }
 
@@ -850,7 +855,7 @@ p {
 }
 
 .journal-block .journal-info .journal-txt p {
-  margin: 0;
+  margin:  0 0 0 8px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -979,7 +984,7 @@ p {
 }
 
 .container-main .block-main .content-main {
-  background:  none repeat scroll 0 0;
+  background:  rgba(49, 49, 49, 0.9) none repeat scroll 0 0;
   display: inline-block;
   width: 100%;
 }

@@ -38,8 +38,10 @@ def update_project(request : HttpRequest, project_id):
     if request.method == "POST":
         project.title = request.POST["title"]
         project.content = request.POST["content"]
-        project.start_date = request.POST["start_date"]
-        project.end_date = request.POST["end_date"]
+        if 'start_date' in request.FILES:
+            project.start_date = request.POST["start_date"]
+        if 'end_date' in request.FILES:
+            project.end_date = request.POST["end_date"]
         if "image" in request.FILES:
             project.image = request.FILES["image"]
         project.save()
@@ -54,6 +56,11 @@ def delete_project(request : HttpRequest, project_id):
     project.delete()
     return redirect("userAdmin:view_projects_page")
 
+def delete_contact(request : HttpRequest, contact_id):
+    contact = UsersContact.objects.get(id=contact_id)
+    contact.delete()
+    return redirect("userAdmin:contact_page")
+
 
 def view_contact(request : HttpRequest):
 
@@ -62,8 +69,3 @@ def view_contact(request : HttpRequest):
     context = {"view_contact" : view_contact}
     return render(request, "Projects/view_contact.html", context)
 
-def project_detail(request : HttpRequest, project_id):
-
-    projects = Projects.objects.get(id=project_id)
-
-    return render(request, "projects/project_detail.html", {"projects" : projects})

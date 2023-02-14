@@ -34,3 +34,9 @@ def view_projects(request : HttpRequest):
 
     context = {"view_projects" : view_projects}
     return render(request, "main/projects.html", context)
+
+def project_detail(request : HttpRequest, project_id):
+
+    projects = Projects.objects.get(id=project_id)
+
+    return render(request, "main/project_detail.html", {"projects" : projects})

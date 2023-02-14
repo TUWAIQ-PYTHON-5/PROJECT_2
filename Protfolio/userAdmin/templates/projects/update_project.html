@@ -11,16 +11,17 @@
     <div class="transbox">
         <div class="row">
             <div class="col" id = "box">
-                <input type="text" name="title" class="form-control m-2 text-dark" placeholder="Title" value="{{ project.title }}"/>
-                <textarea class="form-control m-2 text-dark" name="content" placeholder="Content">{{ project.content }}</textarea>
-                <label>{{ project.start_date }}</label>
-                <input type="date" name="start_date" value="{{ project.start_date }}" placeholder="start date" class= "m-2"/>
-                <label><label>{{ project.end_date }}</label></label>
-                <input type="date" name="end_date" value="{{ project.end_date }}" placeholder="end date" class= "m-2"/>
+                <img src="{{ project.image.url }}" alt="img" class="w-50">
+                <input type="text" name="title" class="form-control m-2 ms-0 text-dark w-50" placeholder="Title" value="{{ project.title }}"/>
+                <textarea class="form-control m-2 ms-0 text-dark w-50" name="content" placeholder="Content">{{ project.content }}</textarea>
+                <label>{{ project.start_date }}:</label>
+                <input type="date" name="start_date" value="{{ project.start_date }}" placeholder="start date" class= ""/>
+                <label><label>{{ project.end_date }}:</label></label>
+                <input type="date" name="end_date" value="{{ project.end_date }}" placeholder="end date" class= ""/>
                 <br>
                 <label>Choose File:</label>
-                <input type="file" name="image" value="{{ project.image.url }}" class="form-control"/>
-                <input type="submit" class="btn btn-dark" value="Update Project" />
+                <input type="file" name="image" value="{{ project.image.url }}" class="form-control w-50"/>
+                <input type="submit" class="btn btn-dark mt-2 " value="Update Project" />
             </div>
         </div>
     </div>

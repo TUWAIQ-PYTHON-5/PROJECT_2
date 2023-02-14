@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %} Project {% endblock %}
+
+{% block content %}
+
+<div class="main-content paddsection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="container-main single-main">
+              <div class="col-md-12">
+                <div class="block-main mb-30">
+                  <div class="container">
+                    <img src="{{ projects.image.url }}" class="img-responsive w-100" alt="reviews2">
+                    <div class="content-main single-post padDiv">
+                      <div class="journal-txt ms-2">
+                        <h4 style="color: white;">{{ projects.title }}</h4>
+                      </div>
+                      <div class="post-meta">
+                        <ul class="list-unstyled mb-0">
+                          <li class="date">Start at: {{ projects.start_date }}</li>
+                          <li class="date">Ended at: {{ projects.end_date }}</li>
+                        </ul>
+                      </div>
+                      <p class="mb-30 ms-2">{{ projects.content }}</p>
+                  </div>
+                  
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}
