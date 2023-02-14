@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
-from .models import UsersContact
+from .models import UsersContact,Projects
 
 
 # Create your views here.
@@ -12,10 +12,6 @@ def main_page(request : HttpRequest):
 def about_page(request : HttpRequest):
     
     return render(request, 'main/about.html')
-
-def projects_page(request : HttpRequest):
-    
-    return render(request, 'main/projects.html')
 
 def contact_page(request : HttpRequest):
     
@@ -31,3 +27,10 @@ def add_contact(request : HttpRequest):
 
 
     return render(request, "main/contact.html")
+
+def view_projects(request : HttpRequest):
+
+    view_projects = Projects.objects.all()
+
+    context = {"view_projects" : view_projects}
+    return render(request, "main/projects.html", context)

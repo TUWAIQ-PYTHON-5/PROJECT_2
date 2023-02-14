@@ -1,3 +1,10 @@
+{% extends "projects/base.html" %}
+{% load static %}
+
+{% block title %} Project {% endblock %}
+
+{% block content %}
+
 <div class="main-content paddsection">
     <div class="container">
       <div class="row justify-content-center">
@@ -6,11 +13,11 @@
             <div class="container-main single-main">
               <div class="col-md-12">
                 <div class="block-main mb-30">
-                    {% for project in project %}
-                  <img src="{{ project.image.url }}" class="img-responsive" alt="reviews2">
+
+                  <img src="{{ projects.image.url }}" class="img-responsive w-100" alt="reviews2">
                   <div class="content-main single-post padDiv">
                     <div class="journal-txt">
-                      <h4><a href="{% url 'projects:project_detail' projects.id %}">{{ project.title }}</a></h4>
+                      <h4>{{ project.title }}</h4>
                     </div>
                     <div class="post-meta">
                       <ul class="list-unstyled mb-0">
@@ -19,7 +26,7 @@
                       </ul>
                     </div>
                     <p class="mb-30">{{ projects.content }}</p>
-                    {% endfor %}
+
                   </div>
                 </div>
               </div>
@@ -29,3 +36,6 @@
       </div>
     </div>
 </div>
+
+
+{% endblock %}

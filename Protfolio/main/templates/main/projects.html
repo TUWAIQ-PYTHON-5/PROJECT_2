@@ -9,24 +9,23 @@
 
   <div class="container">
     <div class="section-title text-center">
-      <h2>Projects</h2>
+      <h2 class="text-white">Projects</h2>
     </div>
   </div>
 
   <div class="container">
     <div class="journal-block">
       <div class="row">
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
-        {% for project in project %}
+        {% for project in view_projects %}
           <div class="col-lg-4 col-md-6">
             <div class="journal-info">
-              <a href="{% url 'projects:project_detail' projects.id %}"><img src="{{ project.image.url }}" class="img-responsive" alt="img"></a>
+              <a href="{% url 'userAdmin:project_detail' project.id %}"><img src="{{ project.image.url }}" class="img-responsive" alt="img"></a>
               <div class="journal-txt">
-                <h4><a href="{% url 'projects:project_detail' projects.id %}">{{ project.title }}</a></h4>
+                <h4><a href="{% url 'userAdmin:project_detail' project.id %}">{{ project.title }}</a></h4>
                   <div class="post-meta">
                     <ul class="list-unstyled mb-0">
-                      <li class="date">Start at: {{ projects.start_date }}</li>
-                      <li class="date">Ended at: {{ projects.end_date }}</li>
+                      <li class="date">Start at: {{ project.start_date }}</li>
+                      <li class="date">Ended at: {{ project.end_date }}</li>
                     </ul>
                   </div>
                 <p class="separator">{{ projects.content }}</p>
@@ -34,7 +33,6 @@
             </div>
           </div>
         {% endfor %}
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
       </div>
     </div>
   </div>

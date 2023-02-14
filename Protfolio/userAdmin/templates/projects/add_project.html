@@ -6,7 +6,7 @@
 
 <div class="container">
 <h2>Add a New Project</h2>
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="transbox">
         <div class="row">
@@ -15,6 +15,7 @@
                 <textarea class="form-control m-2 text-dark" name="content" placeholder="Content"></textarea>
                 <input type="date" name="start_date" placeholder="start date" class= "m-2"/>
                 <input type="date" name="end_date" placeholder="end date" class= "m-2"/>
+                <br>
                 <label>Choose File:</label>
                 <input type="file" name="image" class="form-control"/>
                 <input type="submit" class="btn btn-dark" value="New Project" />

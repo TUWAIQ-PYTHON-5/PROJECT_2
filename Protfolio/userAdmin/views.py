@@ -26,7 +26,7 @@ def add_project(request : HttpRequest):
                                 end_date = request.POST["end_date"],
                                 image = request.FILES["image"])
         new_project.save()
-        return redirect("projects:view_projects_page")
+        return redirect("userAdmin:view_projects_page")
 
 
     return render(request, "projects/add_project.html")
@@ -34,26 +34,24 @@ def add_project(request : HttpRequest):
 def update_project(request : HttpRequest, project_id):
 
     project = Projects.objects.get(id=project_id)
-    project.start_date = Projects.start_date.isoformat #to make it compatible with input value in html
-    project.end_date = Projects.end_date.isoformat
+
     if request.method == "POST":
         project.title = request.POST["title"]
         project.content = request.POST["content"]
         project.start_date = request.POST["start_date"]
         project.end_date = request.POST["end_date"]
         project.image = request.FILES["image"]
-
         project.save()
-        return redirect("projects:view_projects_page")
+        return redirect("userAdmin:view_projects_page")
 
-    return render(request, "projects/update_projects.html", {"project" : project})
+    return render(request, "projects/update_project.html", {"project" : project})
 
 
 
 def delete_project(request : HttpRequest, project_id):
     project = Projects.objects.get(id=project_id)
     project.delete()
-    return redirect("projects:view_projects_page")
+    return redirect("userAdmin:view_projects_page")
 
 
 def view_contact(request : HttpRequest):
@@ -65,6 +63,6 @@ def view_contact(request : HttpRequest):
 
 def project_detail(request : HttpRequest, project_id):
 
-    project = Projects.objects.get(id=project_id)
+    projects = Projects.objects.get(id=project_id)
 
-    return render(request, "mian/project_detail.html", {"project" : project})
+    return render(request, "projects/project_detail.html", {"projects" : projects})
