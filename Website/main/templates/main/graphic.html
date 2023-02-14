@@ -1,0 +1,138 @@
+{% extends "main/index.html" %}
+{% load static %}
+{% block title %} Graphic Design {% endblock %}
+
+
+{% block content %}
+ <section class="aboutus" id="aboutus">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+      	<div class="heading">
+        <h2>Welcome to Graphic design page !</h2>
+        <h3>What I have done in my academic career</h3>        
+      </div>
+      </div> 
+       </div> 
+      <div class="row">
+      <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="{%  static 'images/de1.jpg' %}" alt=""></div>
+      	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
+          <br><br><br><br>
+            <h3>I am a designer and i am good at creating innovative and designs.</h3>
+            <p><br><h4>A strong focus on color and its impact on customers is the central part of my work. I follow trendy design, so I know what to do and how to make it both beautiful and appealing.</h4></p>      </div>
+
+        </div>
+      	
+      </div>     
+    </div>    
+  </section>
+
+  <section class="aboutus" id="section mt-3">
+    <div class="container mt-5">
+      <div class="row">
+       <div class="col-md-12">
+   
+      </div> 
+       </div> 
+      <div class="row">        
+        <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right media">
+        <br><br><br>
+        <h3>Logo concept :</h3>
+        <p><h5>Designing a modern logo and an elegant visual identity for the Oxygen online store, which is a store specialized in selling plants and their supplies. Therefore, the concept of the logo was inspired by a leaf of a plant that emits oxygen atoms. The colors of the identity symbolize the most prominent sections of the store, namely: Green: Plants | yellow: lighting.</h5></p>
+        </div>
+        <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left media"><img src="{% static 'images/projects/thumb-images/66.png' %}" alt=""></div>
+        <div class="profile-card_social text-center p-4">
+        <a href="{% static 'file/O2.pdf' %}" role="button" class="btn btn-primary btn-sm" >To more information</a>
+        </div>
+      </div>     
+    </div>    
+  </section>
+  
+  <section class="aboutus" id="section mt-3">
+    <br><br>
+    <div class="container mt-5">
+      <div class="row">
+       <div class="col-md-12">
+   
+      </div> 
+       </div> 
+      <div class="row">
+        
+        <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right media">
+        <br><br><br><br>
+        <h3> Assesseur Cafe logo concept :</h3>
+        <p><h5><br>This logo was designed for the owner of the Assesseur Café, in which the element of justice, which is Libra, is combined with coffee beans and tea leaves.
+          The term Assesseur means assistant lawyer.</h5></p>
+        </div>
+        <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-left media"><img src="{% static 'images/projects/thumb-images/11.png' %}" alt=""></div>
+        <div class="profile-card_social text-center p-4">
+        <a href="{% static 'file/Ass.pdf' %}" role="button" class="btn btn-primary btn-sm" >To more information</a>
+        </div>
+      </div>     
+    </div>    
+  </section>
+
+
+
+  <!-- Photos  -->
+
+  <section class="protfolio" id="ourwork">
+    <br> <br>
+      <div class="row">
+        <div class="portfolioFilter">
+          <ul>
+            <li><a href="#" data-filter="*" class="current">All</a></li>
+            <li><a href="#" data-filter=".wordpress">Logo</a></li>
+            <li><a href="#" data-filter=".illustration">Illustration</a></li>
+          </ul>
+        </div>
+        <ul class="portfolioContainer row">
+        <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/11.png" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-plus fa-2x"></i></a> </span> </span> <img src="{% static 'images/projects/thumb-images/11.png' %}" alt="" > </div>
+          </li>
+          <li class="template wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/22.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/22.png' %}" alt="" > </div>
+          </li>
+          <li class="wordpress illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/33.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/33.png' %}" alt="" > </div>
+          </li>
+          <li class="webdesign wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/44.jpg" title="Project Title4" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/44.png' %}" alt="" > </div>
+          </li>
+          <li class="wordpress template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/55.jpg" title="Project Title5" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/55.png' %}" alt="" > </div>
+          </li>
+          <li class="template webdesign illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/66.jpg" title="Project Title6" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/66.png' %}" alt="" > </div>
+          </li>
+          <li class="wordpress template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/77.jpg" title="Project Title7" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/77.png' %}" alt="" > </div>
+          </li>
+          <li class="template webdesign illustration col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/88.jpg" title="Project Title8" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/88.png' %}" alt="" > </div>
+          </li>
+          <li class="template col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/99.jpg" title="Project Title1" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/99.png' %}" alt=""  > </div>
+          </li>
+          <li class="template wordpress col-xs-6 col-sm-3 col-md-4 col-lg-4">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/1010.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/1010.png' %}" alt="" > </div>
+          </li>
+          <li class="wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
+            <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/1111.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a>  </span> </span> <img src="{% static 'images/projects/thumb-images/1111.png' %}" alt="" > </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--  my goals  -->
+  <section class="contact" id="contact" style="background-color: rgb(244, 244, 244);">
+    <div class="container">
+      <div style="text-align: center;">
+        <h1>,,</h1>
+
+        <h2> I follow trendy design, so I know what to do and how to make it both beautiful and appealing.</h2>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
