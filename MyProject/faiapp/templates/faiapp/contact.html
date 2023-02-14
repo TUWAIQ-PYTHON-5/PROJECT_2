@@ -1,15 +1,30 @@
 {% extends 'faiapp/index.html' %}
 
 
+{% block style %}
+<style>
+    .custom-navbar .logo {
+        color:#695aa6;
+    }
+    .custom-navbar .hamburger .hamburger-inner, .custom-navbar .hamburger .hamburger-inner::before, .custom-navbar .hamburger .hamburger-inner::after {
+        background: #695aa6;
+    }
+
+    .custom-navbar .nav .item .link {
+        color:  #695aa6;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 
-     <!-- contact section -->
+     
      <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             
-            <!-- contact form -->
+            
             <form action="" method="post"
             class="contact-form col-md-10 col-lg-8 m-auto">
                 {% csrf_token %}
@@ -23,15 +38,17 @@
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="Send_Message" id="comment" rows="6" class="form-control"
-                            placeholder="Write Something"></textarea>
+                            placeholder="Write Something..."></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input type="submit" value="Send-Message" class="btn btn-outline-primary rounded">
+                        
+                        <input type="submit" value="Send-Message" href="{% url 'faiapp:msg'%}"class="btn btn-outline-primary rounded">
+                       
                     </div>
                 </div>
-            </form><!-- end of contact form -->
-        </div><!-- end of container -->
-    </section><!-- end of contact section -->
+            </form>
+        </div>
+    </section>
 
 
 {% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'faiapp/index.html' %}
+
+
+
+{% block style %}
+<style>
+    .custom-navbar .logo {
+        color:#695aa6;
+    }
+    .custom-navbar .hamburger .hamburger-inner, .custom-navbar .hamburger .hamburger-inner::before, .custom-navbar .hamburger .hamburger-inner::after {
+        background: #695aa6;
+    }
+
+    .custom-navbar .nav .item .link {
+        color:  #695aa6;
+    }
+</style>
+{% endblock %}
+
+{% block content%}
+
+<div class="bg-light p-5 mx-auto rounded">
+    <h3>Your Message Is Successful, Thank You!</h3>
+    
+    <a class="btn-primary" ></a>
+  </div>
+{% endblock %}
+

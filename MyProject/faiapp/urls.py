@@ -7,6 +7,6 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('contact/', views.contact, name="contact"),
     path('gallery/', views.gallery, name="gallery"),
-
-
+    path('msg', views.msg, name='msg'),
+    
 ]

@@ -1,13 +1,24 @@
 {% extends "faiapp/index.html" %}
 
 {% load static %}
+{% block style %}
+<style>
+    .custom-navbar .logo {
+        color: #695aa6;
+    }
+    .custom-navbar .hamburger .hamburger-inner, .custom-navbar .hamburger .hamburger-inner::before, .custom-navbar .hamburger .hamburger-inner::after {
+        background: #695aa6;
+    }
 
-
-
+    .custom-navbar .nav .item .link {
+        color:  #695aa6;
+    }
+</style>
+{% endblock %}
 {% block content %}
 
 
- <p><h3 class = "fw-lighter" style="text-align: center; padding: 20px; margin: 15;"> Welcome To My Gallery.</h3></p>
+<p><h3 class = "fw-lighter" style="text-align: center; padding: 20px; margin: 15;"> Welcome To My Gallery.</h3></p>
 
 <div class="container" style="width:640px;height:360px">
 
@@ -27,15 +38,41 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden"></span>
         </button>
 </div>
 
-<p class = "container fw-lighter" style="text-align: center;width:800px;height:300px; padding: 20px; text-align: center;">
+
+<p><h5 class = "fw-lighter" style="text-align: center; padding: 15px; size: 0cm;  margin: 15; "> If You like My Gallery Please Add Comment: </h5></p>
+
+
+
+
+
+<form action="" method="post"
+class="contact-form col-md-10 col-lg-8 m-auto">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+            <input type="text" name='Name' size="50" class="form-control" placeholder="Your-Name" required>
+        </div>
+  
+        <div class="form-group col-sm-12">
+            <textarea name="your_comment" id="comment" rows="6" class="form-control"
+                placeholder="Write Your Comment..."></textarea>
+        </div>
+        <div class="form-group col-sm-12 mt-3">
+            
+            <input type="submit" value="Send-Message" href="{% url 'faiapp:index'%}"class="btn btn-outline-primary rounded">
+           
+        </div>
+    </div>
+</form>
    
    
 {% endblock %}
