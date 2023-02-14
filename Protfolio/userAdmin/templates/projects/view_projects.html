@@ -1,0 +1,30 @@
+{% extends 'projects/base.html' %}
+
+{% block title %} Projects {% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <button type="button" class="btn btn-secondary"><a href="{% url 'userAdmin:add_projects' %}" class="text-bg-secondary">Add Project</a></button>
+    <h2 style="color: white;"> Projects !</h2>
+    <div class="row">
+        <div class="row">
+            {% for project in view_projects %}
+                <div class="col-3">
+                    <div class="p-4 shadow" >
+                        <a href="{% url 'main:project_detail' project.id %}"><img src="{{ project.image.url }}" class="img-responsive w-100" alt="img"></a>
+                        <a href="{% url 'main:project_detail' project.id %}"><h4 style="color: white;">{{ project.title }}</h4></a>
+                        <div class="transbox mb-2">
+                            <a href="{% url 'userAdmin:update_project' project.id %}" class="btn btn-primary p-1 h-25 ">Update</a>
+                            <a href="{% url 'userAdmin:delete_project' project.id %}" class="btn btn-danger p-1 h-25 ">Delete</a>
+                        </div>
+                        <h6>{{ project.content }}</h6>
+                        <h6>Start at: {{ project.start_date }}</h6>
+                        <h6>Ended at: {{ project.end_date }}</h6>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+{% endblock %}

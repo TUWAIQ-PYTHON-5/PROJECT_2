@@ -1,0 +1,41 @@
+{% extends "main/base.html" %}
+
+{% block title %} Projects {% endblock %}
+
+{% block content %}
+
+<!-- ======= Journal Section ======= -->
+<div id="journal" class="text-left paddsection">
+
+  <div class="container">
+    <div class="section-title text-center">
+      <h2 class="text-white">Projects</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="journal-block">
+      <div class="row">
+        {% for project in view_projects %}
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+              <a href="{% url 'main:project_detail' project.id %}"><img src="{{ project.image.url }}" class="img-responsive" alt="img"></a>
+              <div class="journal-txt">
+                <h4><a href="{% url 'main:project_detail' project.id %}">{{ project.title }}</a></h4>
+                  <div class="post-meta">
+                    <ul class="list-unstyled mb-0">
+                      <li class="date">Start at: {{ project.start_date }}</li>
+                      <li class="date">Ended at: {{ project.end_date }}</li>
+                    </ul>
+                  </div>
+                <p class="separator">{{ project.content }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div><!-- End Journal Section -->
+{% endblock %}

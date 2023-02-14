@@ -1,0 +1,30 @@
+
+.font_0{
+  font-family: 'Alfa Slab One', cursive;
+  color: white;
+  margin-top: 100px;
+  font: bold;
+}
+
+.font_1{
+  font-family: 'Playfair Display', serif;
+  color: white;
+  margin-top: -280px;
+}
+
+.backgroundStyle{
+  position:absolute;
+  align-items: center;
+  width: auto;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center center; 
+  min-height: 100vh;
+
+}
+
+div.transbox {
+  border: black;
+  opacity: 0.7;
+}
+

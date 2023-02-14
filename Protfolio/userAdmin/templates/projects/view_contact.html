@@ -1,0 +1,23 @@
+{% extends 'projects/base.html' %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2> Contact !</h2>
+    <div class="row">
+        <div class="row">
+            {% for contact in view_contact %}
+                <div class="col-3">
+                    <div class="p-4 shadow" >
+                        <h6>Name: {{ contact.name }}</h6>
+                        <h6>Email: {{ contact.email }}</h6>
+                        <h6>Subject: {{ contact.subject }}</h6>
+                        <h6>Message: {{ contact.message }}</h6>
+                        <a href="{% url 'userAdmin:delete_contact' contact.id %}" class="btn btn-danger p-1 h-25 ">Delete</a>
+                    </div>
+                </div>
+            {% endfor %}
+    </div>
+</div>
+{% endblock %}
