@@ -7,6 +7,7 @@ class Projects(models.Model):
     content = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField()
+    image = models.ImageField(upload_to="images/", default="images/default.jpg")
     
 
 class UsersContact(models.Model):

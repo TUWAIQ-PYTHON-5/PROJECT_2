@@ -25,8 +25,8 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <form action="" method="POST">
+        <div class="col-lg-6 mt-5">
+          <form action="{% url  'main:add_contact' %}" method="POST">
             {% csrf_token %}
             <div class="row gy-3">
 

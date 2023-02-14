@@ -9,7 +9,7 @@
 
   <div class="container">
     <div class="section-title text-center">
-      <h2>journal</h2>
+      <h2>Projects</h2>
     </div>
   </div>
 
@@ -17,16 +17,23 @@
     <div class="journal-block">
       <div class="row">
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
-        <div class="col-lg-4 col-md-6">
-          <div class="journal-info">
-            <a href="blog-single.html"><img src="assets/img/blog-post-1.jpg" class="img-responsive" alt="img"></a>
-            <div class="journal-txt">
-              <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
-              <p class="separator">To an English person, it will seem like simplified English
-              </p>
+        {% for project in project %}
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+              <a href="{% url 'projects:project_detail' projects.id %}"><img src="{{ project.image.url }}" class="img-responsive" alt="img"></a>
+              <div class="journal-txt">
+                <h4><a href="{% url 'projects:project_detail' projects.id %}">{{ project.title }}</a></h4>
+                  <div class="post-meta">
+                    <ul class="list-unstyled mb-0">
+                      <li class="date">Start at: {{ projects.start_date }}</li>
+                      <li class="date">Ended at: {{ projects.end_date }}</li>
+                    </ul>
+                  </div>
+                <p class="separator">{{ projects.content }}</p>
+              </div>
             </div>
           </div>
-        </div>
+        {% endfor %}
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
       </div>
     </div>
