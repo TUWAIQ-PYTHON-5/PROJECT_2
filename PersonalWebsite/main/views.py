@@ -12,3 +12,6 @@ def proj1(request :HttpRequest):
 
 def proj2(request :HttpRequest):
     return render (request, 'main/proj2.html')
+
+def proj3(request :HttpRequest):
+    return render (request, 'main/proj3.html')

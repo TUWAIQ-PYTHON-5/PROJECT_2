@@ -8,5 +8,7 @@ urlpatterns =[
     path("", views.index , name ="index"),
     path("firstproject/" , views.proj1 , name="firstproject"),
     path("secondproject/" , views.proj2 , name="secondproject"),
+    path("thirdproject/" , views.proj3, name="thirdproject"),
+
 
 ]

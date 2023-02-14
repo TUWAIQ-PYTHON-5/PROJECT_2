@@ -19,6 +19,7 @@
     <header>
         <a href="#" class="logo">Sara Alotaibi</a>
         <nav class="navigation">
+            <a href="#skills">Skills</a>
             <a href="#published">Published</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -37,7 +38,49 @@
             </div>
         </div>
     </section>
+        
+        
+    <section class="cards" id="skills">
+            <h2 class="title">Skills & Interests</h2>
+            <div class="content">
+                <div class="card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/6808140/pexels-photo-6808140.jpeg"/>
+                    </div>
+                    <div class="info">
+                        <h3>Soft Skills</h3>
+                        <li>Team Leadership</li>
+                        <li>Creative Thinking</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/5496463/pexels-photo-5496463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                    </div>
+                    <div class="info">
+                        <h3>Applied Skills</h3>
+                        <li>Programming with Python</li>
+                        <li>Data analyst </li>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/8438926/pexels-photo-8438926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                    </div>
+                    <div class="info">
+                        <h3>Interests</h3>
+                        <li>Robotics and smart cities</li>
+                        <li>Website development </li>
+                    </div>
+                </div>
+
+
+    </section>
+    
     <section class="cards" id="published">
         <h2 class="title">Published</h2>
         <div class="content">
@@ -75,11 +118,23 @@
                 <div class="project-info">
                     <p class="project-category">An Intelligent Humanoid Pepper Robot For Serving To Human Using Voice Recogni=on and Genera=on Model</p>
                     <strong class="project-title">
-                        <a href="#" class="more-details">More details</a>
+                        <a href="{% url 'main:secondproject' %}" class="more-details">More details</a>
                     </strong>
                 </div>
             </div>
-            
+            <div class="project-card">
+                <div class="project-image">
+                    
+                    <img src="{% static 'images/car_detection.png' %}" />
+                </div>
+                <div class="project-info">
+                    <h3>Car Detection</h3>
+                    <p class="project-category">Due to object detection’s close relationship with video analysis and image understanding, it has attracted much research attention in recent years.</p>
+                    <strong class="project-title">
+                        <a href="{% url 'main:thirdproject' %}" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
         </div>
     </section>
 
