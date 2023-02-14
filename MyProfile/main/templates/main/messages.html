@@ -1,11 +1,22 @@
 {% extends 'main/base2.html' %}
 {% load static %}
 
-{% block title %} About Me {% endblock %}
+{% block title  %} Messages {% endblock %}
 
-{% block content %} 
+{% block content %}
+
+    {% for message in messages %}
+        <div class="p-4 shadow rounded" >
+            <!-- <h2 class="border">name: {{ message.name }}</h2>
+            <h5>E-mail: {{ message.email }}</h5>
+            <h5>The message: {{ message.message }}</h5> -->
+            <input  id="name" value="{{ message.name }}" name="name" type="text" placeholder="NAME" readonly>
+            <input  id="email" name="email" value="{{ message.email }}" type="text" placeholder="E-MAIL" readonly>
+            <textarea id="message" name="message" type="text"  placeholder="MESSAGE" >{{ message.message }}</textarea>
+            <div class="m-3 d-flex gap-2"><a href="{% url 'main:delete_page' message.id %}" class="btn btn-danger">Delete</a></div>
 
 
-<h1>about me page</h1>
+        </div>
+    {% endfor %}
 
 {% endblock %}

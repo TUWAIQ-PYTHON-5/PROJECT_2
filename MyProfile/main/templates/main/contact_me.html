@@ -6,21 +6,21 @@
 {% block content %} 
 
 <div class="col">
-    <div class="row">
-      <header class="me-d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-               
-          
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="{% url 'main:homepage' %}" class="nav-link px-5 link-secondary">Home</a></li>
-          <li><a href="{% url 'main:projects_page' %}" class="nav-link px-5 link-dark">My Projects</a></li>
-          <li><a href="{% url 'main:about_me_page' %}" class="nav-link px-5 link-dark">About Me</a></li>
-          <li><a href="{% url 'main:contact_me_page'%}" class="nav-link px-5 link-dark">Contact</a></li>
-        </ul>
-  
-        
-      </header>
+    
+            <header class="shadowBack me-d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                    
+                
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{% url 'main:homepage' %}" class="nav-link px-5 link-secondary">Home</a></li>
+                <li><a href="{% url 'main:projects_page' %}" class="nav-link px-5 link-dark">My Projects</a></li>
+                <li><a href="{% url 'main:about_me_page' %}" class="nav-link px-5 link-dark">About Me</a></li>
+                <!-- <li><a href="{% url 'main:contact_me_page'%}" class="nav-link px-5 link-dark">Contact</a></li> -->
+            </ul>
+            
+            </header>
 
-    </div>
+    </div> 
+    
     <div class="row">
 
         <div class="full-height">
@@ -33,6 +33,7 @@
                   <input id="name" name="name" type="text" placeholder="NAME">
                   <input id="email" name="email" type="text" placeholder="E-MAIL">
                   <textarea id="message" name="message" type="text" placeholder="MESSAGE"></textarea>
+                  
           <input id="submit" type="submit" value="GO!">
           
         </form>
@@ -40,6 +41,7 @@
         </div>
 
     </div>
+  
 
 
 </div>
