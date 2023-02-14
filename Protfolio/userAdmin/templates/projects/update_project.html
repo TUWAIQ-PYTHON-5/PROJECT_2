@@ -13,7 +13,9 @@
             <div class="col" id = "box">
                 <input type="text" name="title" class="form-control m-2 text-dark" placeholder="Title" value="{{ project.title }}"/>
                 <textarea class="form-control m-2 text-dark" name="content" placeholder="Content">{{ project.content }}</textarea>
+                <label>{{ project.start_date }}</label>
                 <input type="date" name="start_date" value="{{ project.start_date }}" placeholder="start date" class= "m-2"/>
+                <label><label>{{ project.end_date }}</label></label>
                 <input type="date" name="end_date" value="{{ project.end_date }}" placeholder="end date" class= "m-2"/>
                 <br>
                 <label>Choose File:</label>

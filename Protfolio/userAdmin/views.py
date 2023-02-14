@@ -40,7 +40,8 @@ def update_project(request : HttpRequest, project_id):
         project.content = request.POST["content"]
         project.start_date = request.POST["start_date"]
         project.end_date = request.POST["end_date"]
-        project.image = request.FILES["image"]
+        if "image" in request.FILES:
+            project.image = request.FILES["image"]
         project.save()
         return redirect("userAdmin:view_projects_page")
 
