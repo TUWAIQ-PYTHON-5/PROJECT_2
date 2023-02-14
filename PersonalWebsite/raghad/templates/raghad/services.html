@@ -1,0 +1,358 @@
+{%extends 'raghad/base.html'%}
+{% load static %}
+
+
+{% block title %} My Services {% endblock %}
+
+
+
+{% block content %}
+<head><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Mirza&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Mirza&family=Neucha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {font-family: 'Courgette', cursive;}
+   h2,h3,h4,h5,h1{font-family: 'Neucha', cursive;}
+
+
+   body{margin-top:20px;
+}
+.service-container {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .icon {
+  margin-top: 5%;
+  font-size: 38px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .number-icon .icon-2 {
+  height: 70px;
+  width: 70px;
+  line-height: 80px;
+  border-radius: 64% 36% 55% 45% / 76% 72% 28% 24% !important;
+  border-color: #f89d36 !important;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .number-icon .icon-2 i {
+  font-size: 30px;
+}
+
+.service-container .number-icon .number {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  margin: 0 auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container .number-icon .number span {
+  line-height: 30px;
+}
+
+.service-container .content .number {
+  font-size: 40px;
+  color: #dee2e6;
+}
+
+.service-container .content .title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container.hover-bg {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-container.hover-bg .smooth-icon {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  font-size: 60px;
+  color: #f8f9fa;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.service-container.hover-bg:hover {
+  background-color: #f89d36;
+}
+
+.service-container.hover-bg:hover .content .title {
+  color: #ffffff !important;
+}
+
+.service-container.hover-bg:hover .content .serv-pera {
+  color: #fafafb !important;
+}
+
+.service-container.hover-bg:hover .smooth-icon {
+  font-size: 100px;
+  opacity: 0.2;
+  bottom: -20px;
+  right: 10px;
+}
+
+.service-container:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+          box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+}
+
+.service-container:hover .icon {
+  color: #f89d36;
+  -webkit-animation: mover 1s infinite alternate;
+          animation: mover 1s infinite alternate;
+}
+
+.service-container:hover .number-icon .icon-2 {
+  background-color: #f89d36;
+  border-radius: 50% !important;
+}
+
+.service-container:hover .number-icon .icon-2 i {
+  color: #ffffff !important;
+}
+
+.service-container:hover .number-icon .number {
+  color: #ffffff;
+  background: #f89d36 !important;
+  border-color: #ffffff !important;
+}
+
+.service-container:hover .content .title {
+  color: #f89d36;
+}
+
+.service-container a:hover,
+.service-container a .title:hover {
+  color: #f89d36 !important;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+.service-wrapper {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 45px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .content .title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 500;
+}
+
+.service-wrapper .big-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper:hover {
+  -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+          box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+  background: #ffffff;
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  border-color: transparent !important;
+}
+
+.service-wrapper:hover .icon {
+  background: #77475c !important;
+  color: #ffffff !important;
+}
+
+.service-wrapper:hover .big-icon {
+  z-index: -1;
+  opacity: 0.1;
+  font-size: 160px;
+  color: #896060 !important;
+
+}
+
+.text-custom {
+    color: #f089bb !important;
+}
+
+.uim-svg {
+    display: inline-block;
+    height: 1em;
+    vertical-align: -0.125em;
+    font-size: inherit;
+    fill: var(--uim-color, currentColor);
+}
+
+
+</style>
+
+
+
+
+
+<br><br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="section-title text-center mb-4 pb-2">
+                <h2 class="text-muted para-desc mx-auto mb-0">Having a website has become extremely important. Once you create a website, you will communicate with anyone you want to present your activity to.</h2>
+             <br>
+                    <h1 class="title mb-4">Our Features</h1>
+            </div>
+        </div><!--end col-->
+    </div><!--end row-->
+
+
+
+    
+
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+            <div class="card service-wrapper rounded border-0 shadow p-4">
+                <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                    <span class="uim-svg" ><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M15,2c-3.3772,0.00142-6.27155,2.41462-6.88025,5.73651c2.90693-1.59074,6.553-0.52375,8.14374,2.38317c0.98206,1.79462,0.98206,3.96594,0,5.76057c3.8013-0.69634,6.31837-4.3424,5.62202-8.14369C21.27662,4.41261,18.37925,1.99872,15,2z"></path><circle cx="7" cy="17" r="5" class="uim-primary"></circle><path class="uim-tertiary" d="M11,7c-3.08339,0.00031-5.66461,2.33759-5.97,5.40582c2.5358-1.08949,5.47469,0.08297,6.56418,2.61877c0.54113,1.25947,0.54113,2.68593,0,3.94541c3.29729-0.32786,5.7045-3.26663,5.37664-6.56392C16.66569,9.33735,14.08386,6.99972,11,7z"></path></svg></span>
+                </div>
+                <div class="content mt-4">
+                    <h5 class="title">Modern designs</h5>
+                    <p class="text-muted mt-3 mb-0"> modern  design will reflects your website. So it’s important to be visually appealing, polished and professional. and to let your message shine through.So there are multiple choices of web designs to choose from.</p>
+                    <div class="mt-3">
+                        <a href="javascript:void(0)" class="text-custom"> <i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="big-icon h1 text-custom">
+                    <span class="uim-svg" ><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em"><path class="uim-quaternary" d="M15,2c-3.3772,0.00142-6.27155,2.41462-6.88025,5.73651c2.90693-1.59074,6.553-0.52375,8.14374,2.38317c0.98206,1.79462,0.98206,3.96594,0,5.76057c3.8013-0.69634,6.31837-4.3424,5.62202-8.14369C21.27662,4.41261,18.37925,1.99872,15,2z"></path><circle cx="7" cy="17" r="5" class="uim-primary"></circle><path class="uim-tertiary" d="M11,7c-3.08339,0.00031-5.66461,2.33759-5.97,5.40582c2.5358-1.08949,5.47469,0.08297,6.56418,2.61877c0.54113,1.25947,0.54113,2.68593,0,3.94541c3.29729-0.32786,5.7045-3.26663,5.37664-6.56392C16.66569,9.33735,14.08386,6.99972,11,7z"></path></svg></span>
+                </div>
+            </div>
+        </div><!--end col-->
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+            <div class="card service-wrapper rounded border-0 shadow p-4">
+                <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                    <span class="uim-svg" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span>
+                </div>
+                <div class="content mt-4">
+                    <h5 class="title">Fully Responsive</h5>
+                    <p class="text-muted mt-3 mb-0">will rescale itself to preserve the user experience and look and feel across all devices .</p>
+                    <div class="mt-3">
+                        <a href="javascript:void(0)" class="text-custom"> <i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="big-icon h1 text-custom">
+                    <span class="uim-svg" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><rect width="20" height="15" x="2" y="3" class="uim-tertiary" rx="3"></rect><path class="uim-primary" d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path></svg></span>
+                </div>
+            </div>
+        </div><!--end col-->
+
+
+        
+
+        
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+            <div class="card service-wrapper rounded border-0 shadow p-4">
+                <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                    <span class="uim-svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><path class="uim-primary" d="M12,6a.99974.99974,0,0,1,1,1v4.42249l2.09766,1.2113a1.00016,1.00016,0,0,1-1,1.73242l-2.59766-1.5A1.00455,1.00455,0,0,1,11,12V7A.99974.99974,0,0,1,12,6Z"></path><path class="uim-tertiary" d="M2,12A10,10,0,1,0,12,2,10,10,0,0,0,2,12Zm9-5a1,1,0,0,1,2,0v4.42249l2.09766,1.2113a1.00016,1.00016,0,0,1-1,1.73242l-2.59766-1.5A1.00455,1.00455,0,0,1,11,12Z"></path></svg></span>
+                </div>
+                <div class="content mt-4">
+                    <h5 class="title"> Easy to control</h5>
+                    <p class="text-muted mt-3 mb-0">Supported by technology features.</p>
+                    <div class="mt-3">
+                        <a href="javascript:void(0)" class="text-custom"> <i class="mdi mdi-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="big-icon h1 text-custom">
+                    <span class="uim-svg" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em"><path class="uim-primary" d="M12,6a.99974.99974,0,0,1,1,1v4.42249l2.09766,1.2113a1.00016,1.00016,0,0,1-1,1.73242l-2.59766-1.5A1.00455,1.00455,0,0,1,11,12V7A.99974.99974,0,0,1,12,6Z"></path><path class="uim-tertiary" d="M2,12A10,10,0,1,0,12,2,10,10,0,0,0,2,12Zm9-5a1,1,0,0,1,2,0v4.42249l2.09766,1.2113a1.00016,1.00016,0,0,1-1,1.73242l-2.59766-1.5A1.00455,1.00455,0,0,1,11,12Z"></path></svg></span>
+                </div>
+            </div>
+        </div><!--end col-->
+    </div><!--end row-->
+</div>
+<br><br><br>
+
+
+
+
+
+ <!-- Grid for pricing tables -->
+ <h3 class="w3-padding-16 w3-center">My Prices</h3>
+ <div class="w3-row-padding" >
+   <div class="w3-half w3-margin-bottom">
+     <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+       <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+       <li class="w3-padding-16">simple Design</li>
+       <li class="w3-padding-16"> Without Custom Utilities</li>
+       <li class="w3-padding-16">Email Support</li>
+       <li class="w3-padding-16">
+         <h2>$ 300</h2>
+       </li>
+       <li class="w3-light-grey w3-padding-24">
+        <a href="{% url 'raghad:sign_up' %}"> <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign up</button></a>
+       </li>
+     </ul>
+   </div>
+
+   <div class="w3-half">
+     <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+       <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+       <li class="w3-padding-16">Complicated Design</li>
+       <li class="w3-padding-16">Custom Utilities</li>
+       <li class="w3-padding-16">Endless Support</li>
+       <li class="w3-padding-16">
+         <h2>$ 700</h2>
+       </li>
+       <li class="w3-light-grey w3-padding-24">
+        <a href="{% url 'raghad:sign_up' %}">  <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign up</button></a>
+       </li>
+     </ul>
+   </div>
+ <!-- End Grid/Pricing tables -->
+ </div>
+ <br><br>
+<!-- End About Section -->
+</div>
+</div> 
+
+
+
+{% endblock %}

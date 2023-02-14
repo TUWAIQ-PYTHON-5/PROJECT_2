@@ -1,0 +1,68 @@
+{%extends 'raghad/base.html'%}
+{% load static %}
+
+
+{% block title %} Raghad's website{% endblock %}
+
+
+
+
+{% block content %}
+<head>  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /></head>
+<style>
+
+
+
+.title {   color: #935454;
+    padding: 50px;
+    margin-left:30px ;
+    font-size: 4.5rem;
+}
+
+.desc{ color: #262020;
+    margin-left:60px ;
+  font-size:20px ;
+}
+.img1{float:right;
+  width: 27%;
+  padding-top: 0px;
+  margin-right: 100px;
+  margin-top: 3px;
+  
+  }
+.row {
+    position: absolute;
+    top: 100px;
+    clear: both;
+}
+</style>
+
+
+
+
+
+
+
+<section id="home">
+    <div class="container">
+        <div class="row">
+        <div class=" col-md-7 text">
+            <h2 class="title">Hi, it's me Raghad</h2>
+            <p class="desc">As a developer, my superpower happens behind the scenes to make a website look great and work fast and perform well with a seamless user experience.</p>
+        </div>
+        </div>
+    </div>
+ 
+
+    <div class=" col-md">
+       <img class="img1" src="{% static 'images/home.png' %}" alt="">
+ 
+
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{%extends 'raghad/base.html'%}
+{% load static %}
+
+
+{% block title %}  Payment page {% endblock %}
+
+
+
+{% block content %}
+<style>
+#form1{padding-top: 80px;
+    color: #d4baba;
+width: 50px;}
+    </style>
+
+<div class="container">
+
+    <div class="container "id="form1" style="width: 500px; background-color: rgb(32, 32, 31); border-radius: 30px;">
+        <h2>Sign up </h2><hr class="my-4">
+        <br>
+    
+    <form action=""  method="POST">
+        {% csrf_token %}
+        <div>
+        <div class="form-group col-lg-9">
+            <label for="fname">Full name</label>
+            <input type="text" name="full_name" class="form-control" id="fname" placeholder=" Full name">
+          </div>
+    
+        <div class="form-group">
+          <label for="Input">Email</label>
+          <input type="email" name="email" class="form-control" id="Input" placeholder="name@example.com">
+          <div class="invalid-feedback">
+            Valid Email is required.</div>
+        </div>
+    
+        <div class="form-group">
+          <label for="number">Enter your Number</label>
+          <input type="tel" name="phone_number" class="form-control" id="number" placeholder="Enter your phone number">
+        </div><br>
+       <div class="mx-auto" style="width: 300px; ">  <button type="submit" class="btn btn-secondary">Submit</button></div> 
+    </form>
+    <br><br>
+       </div>
+      </div>
+<br><br>
+
+
+
+      
+{% endblock %}
