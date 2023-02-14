@@ -1,0 +1,71 @@
+{% extends "main/index.html" %}
+{% load static %}
+
+{% block title %} Project 1 {% endblock %}
+
+{% block content %}
+
+<div class="card mb-3   w-50 mx-auto ">
+    <img src="{% static 'images/proj2.png' %}"  class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">JHU-Crowd++ dataset</h5>
+      <p class="card-text">A comprehensive dataset with 4,372 images and 1.51 million annotations. 
+        In comparison to existing datasets, the proposed dataset is collected under a variety of diverse scenarios and environmental conditions.
+         In addition, the dataset provides comparatively richer set of annotations like dots, approximate bounding boxes, .blur levels, etc</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+  <div class="card mb-3   w-50 mx-auto ">
+    <div class="card-body">
+      <h5 class="card-title">Darknet: Open Source Neural Networks in C</h5>
+      <p class="card-text">Darknet is an open source neural network framework written in C and CUDA.
+        It is fast, easy to install, and supports CPU and GPU computation. 
+        You can find the source on GitHub</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+    <img src="{% static 'images/proj3.png' %} " class="card-img-bottom" alt="...">
+  </div>
+  <div class="card mb-3   w-50 mx-auto ">
+    <div class="card-body">
+      <h5 class="card-title">Conclusion</h5>
+      <p class="card-text">The process of learning through pictures is a very difficult process,
+        but there is a great development in this field that may lead to good and satisfactory results, 
+       but counting people in crowds remains a very difficult process and requires more than just pictures and training.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+    <img src="{% static 'images/proj4.png'%}" class="card-img-bottom" alt="...">
+  </div>
+
+
+  <div class="card mb-3   w-50 mx-auto ">
+    <div class="card-body">
+      <h5 class="card-title">Demo</h5>
+      <p class="card-text">These results shown above mean that we have reached a good accuracy,
+        but it is not sufficient. This is due to the fact that the number of images must be increased to the largest possible number to cover all cases,
+         and there is also some error annotation that must be modified and corrected in order to ensure proper training on sound data.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+
+
+   
+
+    <video controls>
+    <source src="{% static 'videos/video1.mp4'%}" class="card-img-bottom" alt="...">
+    </video>
+  </div>
+
+  <div class="card mb-3   w-50 mx-auto">
+    <div class="card-body">
+      <h5 class="card-title">Project PDF</h5>
+      <p class="card-text">If you want to view the algorithms and the results obtained and read the entire file, click on Reed .</p>
+      <a href="{% static 'media/Crowd_Management_System.pdf' %}" class="btn btn-primary"style=" color: rgb(218, 193, 193);" >Reed</a>
+    </div>
+  </div>
+
+
+
+</div>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+{% endblock %}

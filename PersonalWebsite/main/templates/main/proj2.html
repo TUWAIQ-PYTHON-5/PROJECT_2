@@ -1,0 +1,70 @@
+{% extends "main/index.html" %}
+{% load static %}
+
+{% block title %} Project 2{% endblock %}
+
+{% block content %}
+
+<div class="card mb-3   w-50 mx-auto ">
+    <img src="{% static 'images/proj5.jpg' %}"  class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">ENGAGEMENT MODE</h5>
+      <p class="card-text">The engagement mode is ac6vated when a human presence is detected.
+         In this case, Pepper introduces itself as an assis6ng robot that can answer the ques6ons of Hujjaj regarding Hajj and Omra. 
+         The human can interact with pepper through voice, and Pepper can reply with voice as well.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+  <div class="card mb-3   w-50 mx-auto ">
+    <div class="card-body">
+      <h5 class="card-title">Voice Question/Answer Model</h5>
+      <p class="card-text">Ini6ally, the robot receives a ques6on through human speech recogni6on.
+         Next, the robot relies on a ques6on analysis technique in order to extract the keywords that are used in the ques6on,
+          and relate them with the answer database. In order to do so, the developers have developed an answer database containing informa6on about Hajj and Omra, 
+          and Islam in general. </p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+    <img src="{% static 'images/proj6.jpg' %} " class="card-img-bottom" alt="...">
+  </div>
+  <div class="card mb-3   w-50 mx-auto ">
+    <div class="card-body">
+      <h5 class="card-title">Pepper-Human Interaction Results</h5>
+      <p class="card-text">Through voice, graphical interface, as well as non verbal communications,
+         the humanoid social robot Pepper was able to efficiently sustain a positive interaction between itself and the human next to it.
+          As a matter of fact, these software details that we implemented as described before contribute majorly to the functioning of the robot,
+           especially because its technical parameters alone are not enough, including its computational power (Pepper Y20V16 is equipped with ATOM 1.9 GHz quad core,
+            1 GB RAM, 2 GB Flash, and 8GB Micro SDHC for its Linux-based operating system).</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+    <img src="{% static 'images/proj7.jpg'%}" class="card-img-bottom" alt="...">
+  </div>
+
+
+  <div class="card mb-3   w-50 mx-auto ">
+    <div class="card-body">
+      <h5 class="card-title">Question-Answering Results</h5>
+      <p class="card-text">Pepper was able to successfully interact with humans and correctly answer their questions related to Hajj.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+
+    <video controls ="card mb-3   w-50 mx-auto ">
+    <source src="{% static 'videos/video2.mp4'%}" class="card-img-bottom" alt="...">
+    </video>
+  </div>
+
+
+  <div class="card mb-3   w-50 mx-auto">
+    <div class="card-body">
+      <h5 class="card-title">Project PDF</h5>
+      <p class="card-text">If you want to view the algorithms and the results obtained and read the entire file, click on Reed .</p>
+      <a href="{% static 'media/Final_project_master.pdf' %}" class="btn btn-primary" style=" color: rgb(218, 193, 193);" >Reed</a>
+    </div>
+  </div>
+
+
+
+</div>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+{% endblock %}
