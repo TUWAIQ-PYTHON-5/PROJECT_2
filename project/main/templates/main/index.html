@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            
+        <h1>AL-Zidani</h1>
+        <p>Are you looking for a guide to entering the Saudi market, TASI?</p>
+           <p> You are in the right place </p>
+        
+        
+        </div>
+    
+
+        <a href="{% url 'main:Recommendations_page' %}">
+            <div class="card card1">
+                <h4>Recommendations</h4>
+                <p>Recommendations and analysis in the Saudi stock market, Tasi</p>
+            </div>
+        </a>
+
+
+<a href="{% url 'main:prodect_page' %}">
+        <div class="card card2">
+            <h4>Prodects</h4>
+            <p>Some prodect</p>
+        </div>
+
+    </a>
+
+    <a href="{% url 'main:comment_page' %}">
+        <div class="card card3">
+            <h4>Comments</h4>
+            <p>some comments</p>
+        </div>
+    </a>
+
+        <div class="card card4">
+            <h1>Soon</h1>
+        </div>
+        
+        
+
+        
+
+    
+
+
+
+
+    </div>
+    
+</div>
+
+{% endblock %}
