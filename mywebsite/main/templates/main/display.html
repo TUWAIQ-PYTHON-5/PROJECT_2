@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+
+
+
+
+{% block web %}
+
+
+
+
+{%for person in post %}
+
+
+
+<div>
+    <h2>{{person.name}}</h2>
+     <h2></h2>
+     {%for comment in postcomment %}
+
+
+
+     
+    <h2>{{comment.name}}</h2>
+     <h2>{{comment.comment}}</h2>
+</div>
+
+
+{%endfor%}
+</div>
+
+
+{%endfor%}
+
+
+
+{%endblock%}
