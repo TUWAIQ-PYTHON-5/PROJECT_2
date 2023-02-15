@@ -1,0 +1,168 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+    
+     
+
+{% block home %}
+
+<!-- HOME -->
+<section id="homeone" data-stellar-background-ratio="0.5">
+    
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-12">
+                   <div class="home-info">
+                        
+                        <br>
+                        <span>
+                             
+                             
+                        </span>
+                   </div>
+              </div>
+              
+         </div>
+    </div>
+</section>
+
+
+{% endblock %}
+     
+
+                    
+
+
+     <!-- BLOG DETAIL -->
+     
+   {% block blog %}
+
+   
+   <section id="blog-detail" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+               
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <!-- BLOG THUMB -->
+                    <div class="blog-detail-thumb">
+                         <div class="blog-image">
+                              <img style="width: 400px; height: 600px;" src="{{ blog.image.url }}" class="img-responsive" alt="Blog Image">
+                         </div>
+                         
+                         
+
+                         <blockquote><h1>Title : {{blog.title}}</h1></blockquote>
+
+                         
+
+                         <div class="blog-ads">
+                              <h4>content : {{blog.description}}</h4>
+                         </div>
+                         
+                         
+                         <p>This blog published on : {{ blog.publish_date }}</p>
+                         
+                    </div>
+               </div>
+              
+
+               
+          </div>
+     </div>
+     {% if messages %}
+          {% for i in messages %}
+          <div class="alert alert-success" role="alert">
+               {{ i }}
+             </div>
+               
+          {% endfor %}
+          {% endif %}
+
+             
+             {% for i in allreplay %}
+             
+          <div class="blog-ads">
+               <h2>Replay </h2>
+               <h3> sender : {{ i.name}}</h3>
+               <h4>replay : {{i.replayMsg}}</h4>
+               <p>This replay add  on : {{ i.replay_date }}</p>
+          </div>
+          
+          
+          
+          
+     </div>
+     {% endfor %}
+
+
+
+
+
+</section>
+<section id="contact" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                         <h2>Replay to this Blog </h2>
+                         <span class="line-bar">...</span>
+                    </div>
+               </div>
+
+               <div class="col-md-8 col-sm-8">
+
+<form id="contact-form" role="form" action="{% url 'main:replay' blog.id %}" method="post">
+     {% csrf_token %}
+     <div class="col-md-6 col-sm-6">
+          <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="name" required="">
+     </div>
+
+    
+
+     <div class="col-md-6 col-sm-6">
+          <input type="text" class="form-control" placeholder="Your Replay" id="cf-number" name="replayMsg" required="">
+     </div>
+
+    
+
+   
+
+     <div class="col-md-4 col-sm-12">
+          <input type="submit" class="form-control" name="submit" value="Replay">
+     </div>
+
+</form>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+
+    
+   {% endblock %}
+    
+
+
+     <!-- FOOTER -->
+     
+
+     
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>

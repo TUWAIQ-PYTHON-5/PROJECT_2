@@ -1,0 +1,100 @@
+
+
+
+{% extends 'main/base.html' %}
+
+
+
+    
+{% block content %}
+    
+               
+    
+
+
+     <!-- CONTACT -->
+     {% if name %}
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-5 col-sm-6">
+                         <div class="about-info">
+                              <div class="section-title">
+                                   <h2>Thank you <strong>{{ name }}</strong> </h2>
+                                   <span class="line-bar">...</span>
+                              </div>
+                              <p>I will contact you soon on your Email address , Which is <strong>{{ email }}</strong> </p>
+                              <a href="{% url 'main:home_page' %}"  class="btn section-btn smoothScroll">Go Back For Home Page</a>
+                              
+                         </div>
+                    </div>
+                    </div>
+               </section>
+    
+      <br><br>
+   
+
+                         
+                      
+
+     
+     
+    {% else %}
+     <section id="contact" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Contact Me : </h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8">
+                         
+                        
+                         <!-- CONTACT FORM HERE -->
+                         <form id="contact-form" role="form" action="{% url 'main:contact' %}" method="post">
+                              {% csrf_token %}
+                              <div class="col-md-6 col-sm-6">
+                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
+                              </div>
+
+                             
+
+                              <div class="col-md-6 col-sm-6">
+                                   <input type="tel" class="form-control" placeholder="Your Email" id="cf-number" name="cf-email" required="">
+                              </div>
+
+                             
+
+                              <div class="col-md-12 col-sm-12">
+                                   <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
+                              </div>
+
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="submit" value="Send Message">
+                              </div>
+
+                         </form>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="google-map">
+
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.2868020143674!2d46.71510638460176!3d24.854052351634518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2z2KfZg9in2K_ZitmF2YrYqSDYt9mI2YrZgg!5e0!3m2!1sar!2ssa!4v1676036412184!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     {% endif %}
+
+{% endblock %}
+
+    
+
+
