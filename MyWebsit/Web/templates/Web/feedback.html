@@ -30,30 +30,13 @@
                       </div>
                       <div class="form-group col-sm-12 mt-3">
               
-                          <input type="submit" value="Send-Message" href="{% url 'Web:feedback'%}"class="btn btn-outline-primary rounded">
+                          <input type="submit" value="Send-Message" class="btn btn-outline-primary rounded">
               
                       </div>
                   </div>
               </form>
           
-              <div class="row">
-                          {% for comment in comments %}
               
-                          <div class="col-md-6">
-                              <div class="testimonial-card">
-                                  <div class="testimonial-card-img-holder">
-              
-                                  </div>
-                                  <div class="testimonial-card-body">
-                                      <h6 class="testimonial-card-title">{{comment.Name}}</h6>
-                                      <p class="testimonial-card-subtitle">{{comment.your_comment}}</p>
-              
-                                  </div>
-                              </div>
-                          </div>
-                          {% endfor %}
-
-          </div>
           </div>
         </div>
       </section>

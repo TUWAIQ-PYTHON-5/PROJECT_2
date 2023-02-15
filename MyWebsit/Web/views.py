@@ -19,10 +19,10 @@ def feedback(request: HttpRequest):
     if request.method == "POST":
         new_comment = Comment(Name = request.POST["Name"], your_comment = request.POST["your_comment"])
         new_comment.save()
+        return redirect("Web:thankyou" )
     return render(request, 'Web/feedback.html',  {"comments":comments})
 
 
 
 def thankyou(request : HttpRequest):
-    comments=Comment.objects.all()
-    return render(request, 'Web/thankyou.html', {"comments":comments})
+    return render(request, 'Web/thankyou.html')
