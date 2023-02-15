@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<img src="{% static '/images/contact.png' %}" alt="Girl in a jacket" style="width:650px;height:150px;">
+
+<main>
+    <!-- Contact -->
+    <section class="bg--secondary-color pt3 pb3">
+        <div class="container">
+            <div class="mb2 align--center">
+                <h3 class="mb1">Write to reach me</h3>
+            </div>
+            <form>
+                {% csrf_token %}
+                <div class="grid-row">
+                    <div class="grid-column span-half mt1">
+                        <label class="label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text">
+                    </div>
+                    <div class="grid-column span-half mt1">
+                        <label class="label" for="email">Email</label>
+                        <input class="form-control" id="email" type="email">
+                    </div>
+                </div>
+                <label class="label mt1" for="message">Message</label>
+                <textarea class="form-control" id="message"></textarea>
+                <div class="align--right mt1">
+                    <button class="btn btn--outline">Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+</main>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Details for {{ blog.title }}  {% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <h1>{{ new.title }}</h1>
+    <h6>Date: {{ new.writingDate }}</h6>
+    <p>{{ new.content }}</p>
+
+
+    <hr/>
+
+    <div  class="m-3">
+        <h3>Reviews :</h3>
+        {% for comment in comments  %}
+            <div class="p-2 border mt-2">
+                <h5>{{ comment.name }}</h5>
+                <h6>Date: {{ comment.writingDate }}</h6>
+                <p>{{ comment.content }}</p>
+
+            </div>
+        {% endfor %}
+    </div>
+
+    <div>
+        <h3>Add Comment</h3>
+        <div>
+            <form action="{% url  'main:comment' new.id %}" method="post">
+                {% csrf_token %}
+
+                <input type="text" name="name" class="form-control" placeholder="Your Name.." /> 
+
+                <textarea name="content" class="form-control" placeholder="Your Review here..."></textarea>
+
+
+                <input class="btn btn-primary" type="submit" value="Add Comment" />
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
