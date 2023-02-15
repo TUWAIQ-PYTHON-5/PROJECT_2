@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Service Page{% endblock %}
+
+
+{%block content%}
+
+<div class="container text-center ">   
+    
+    <div class="row color-text">
+        <h1 class="mt-5"> UI PROJECT </h1>
+        
+        <div class="col">
+            <h2>Binary</h2>
+            <img  src="{% static 'images/white_logo.png' %}" class="d-block w-50 project-contant " alt="...">
+            <div class="text-center color-text">
+                <h5 class="mt-5 mb-2 ps-3 pe-3">
+                  This project was built on Adobe xd
+                  stakeholders of the project are the owners of coffee shops and suppliers
+                  
+                </h5>
+                <a href="{% url 'main:coffee_project_detail'%}">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Read More</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="col">
+            <h2>Alphabet</h2>
+            <img  src="{% static 'images/alphabet_logo.png' %}" class="d-block w-50 project-contant" alt="...">
+            <div class="text-center color-text mt-5">
+                <h5 class="mt-5 mb-2 ps-3 pe-3">
+                  This project was built on Adobe xd 
+                  stakeholders of the project are the parents and children between 6 - 12 
+                </h5>
+                <a href="{% url 'main:alphabet_project_detail' %}">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Read More</button>
+                </a>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+{% endblock %}
+
