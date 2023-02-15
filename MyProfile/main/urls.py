@@ -11,6 +11,4 @@ urlpatterns = [
     path("contact/", views.contact_me, name="contact_me_page"),
     path("messages/", views.messages, name="messages_page"),
     path("delete/<message_id>/", views.delete_message, name="delete_page"),
-    path("successfully_message/", views.successfully_message, name="successfully_message_page"),
-
 ]

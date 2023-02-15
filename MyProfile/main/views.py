@@ -36,5 +36,4 @@ def delete_message(request : HttpRequest, message_id):
     message.delete()
     return redirect("main:messages_page")
 
-def successfully_message(request : HttpRequest):
-    return render(request, "main/successfully_message.html")
+
