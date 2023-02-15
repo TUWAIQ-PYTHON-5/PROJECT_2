@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %} 
+
+<div class="row" >
+
+    <div class="full-height">
+       <div class="container">
+           <h3 class="textCenter">Thank you for your visit. Give us your impression</h3>
+           <form action="{% url 'main:contect_me' %}" method="POST" id="form" class="topBefore formG">
+                           {% csrf_token %}
+              <div>
+                  <div class="mb-3 col-md-6 offset-4">
+                      <label for="name" class="form-label">name</label>
+                      <input type="text" class="form-control" id="name"  name="name" placeholder="name">
+                  </div>
+                  <div class="mb-3 col-md-6 offset-4">
+                      <label for="email" class="form-label">email</label>
+                      <input type="email" class="form-control" id="email"  name="name" placeholder="email">
+                  </div>
+                  <div class="mb-3 col-md-6 offset-4">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3 col-md-6 offset-4">
+                    <input id="submit" type="submit" value="Send<<3" class="btn btn-danger btnCustom">
+                  </div>
+              </div>
+           </form>
+           <div class="row">
+               <div class="col-md-12">
+                   <table class="paleBlueRows ">
+                       <thead>
+                       <tr>
+                           <th>Name</th>
+                           <th>Message</th>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       {%for comment in comments%}
+                       <tr>
+                           <td>{{comment.name}}</td>
+                           <td>{{comment.message}}</td>
+                       </tr>
+                       {%endfor%}
+                       </tbody>
+                   </table>
+
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+
+{% endblock %}

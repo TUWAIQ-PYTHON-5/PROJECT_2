@@ -1,0 +1,91 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %} interests_page {% endblock %}
+
+{% block content %}
+<style>
+    body {width: 100;
+    height: 100vh;
+    background: linear-gradient(rgb(204, 190, 129),white);}
+    
+</style>
+
+<h3 class="text-center mt-4 mb-3">3D printing</h3>
+<div class="container">
+   <div class="row">
+
+       <div class="col-md-6">
+           <div class="card">
+               <img src="{% static 'images/d3.jpg' %}" class="card-img-top image_int" alt="...">
+               <div class="card-body">
+                   <h5 class="card-title"></h5>
+                   <p class="card-text">3D printing is some of the manufacturing techniques, in which designs of 3D designs are made in small layers and then manufactured using 3D printers by printing one layer on top of another until the final shape is completed..</p>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-6">
+           <div class="card">
+            <img src="{% static 'images/vv.jpg' %}" class="card-img-top image_int" alt="...">
+               <div class="card-body">
+                   <h5 class="card-title"></h5>
+                   <p class="card-text">Parts can also be made of different materials with different mechanical and physical specifications and then assembled together. Advanced technologies for three-dimensional printing produce models that are very similar to the look, feel and function of a product prototype</p>
+               </div>
+           </div>
+       </div>
+       
+   </div>
+   <div class="row">
+    <h3 class="text-center mt-4 mb-3">Books</h3>  
+
+    <div class="col-md-6">
+        <div class="card">
+            <img src="{% static 'images/book1.jpg' %}" class="card-img-top image_int" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Maybe in Another Life</h5>
+                <p class="card-text">about a young woman whose fate hinges on the choice she makes after bumping into an old flame; in alternating chapters..</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+         <img src="{% static 'images/sss.jpg' %}" class="card-img-top image_int" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">السماح بالرحيل</h5>
+                <p class="card-text">لسماح بالرحيل بشكل موجز وبسيط هو أن نستحضر الشعور، أن نشعر بوجوده وأن يكون موجودًا.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+    <h3 class="text-center mt-4 mb-3">Astrology</h3>  
+
+    <div class="col-md-6">
+        <div class="card">
+            <img src="{% static 'images/bg.jpg' %}" class="card-img-top image_int" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">It is a natural science that studies astronomical phenomena and celestial bodies.  Astronomy uses mathematics, physics, and chemistry to explain the origin and evolution of these phenomena and objects.  Interesting cartoons of planets, moons, stars, nebulae, galaxies and comets..</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+         <img src="{% static 'images/gh.jpg' %}" class="card-img-top image_int" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Current astronomy is divided into two branches theoretical astronomy and observational astronomy. Observational astronomy focuses on obtaining data from observations of astronomical objects. This data is then analyzed using basic principles of physics..</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+   
+</div>
+
+
+
+
+
+
+{% endblock %}
