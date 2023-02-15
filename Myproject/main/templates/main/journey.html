@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12 head_right">
               <h2 class="mb-4">Educations & Experiences</h2>
 
                 <div class="timeline">
@@ -119,7 +119,7 @@
             </div>
 
             <div class="col-lg-6 col-12 moments-section">
-                <div class="header">
+                <div class="head_right">
                     <h2 class="mb-4"> Momments </h2>
                   </div>
                   
@@ -148,51 +148,64 @@
     </div>
 </section>
 
-<div class="row">
+
+<section style="margin-top: 30px;" id="Comments">
+
+    <div class="head_right">
+        <h2>Comments..</h2>
+    </div>
+
     {% for comment in comments %}
 
-    <div class="col-md-6">
-        <div class="testimonial-card">
-            <div class="testimonial-card-img-holder">
-
-            </div>
-            <div class="testimonial-card-body">
-                <h6 class="testimonial-card-title">{{comment.Name}}</h6>
-                <p class="testimonial-card-subtitle">{{comment.your_comment}}</p>
-
-            </div>
+    <div class="col-md-3 col-sm-6 " style="border: 2px solid; border-radius: 5px; margin-right: 30px; margin-top: 30px; padding: 10px; color: #889da4;" >
+        <div class="card mb-5">
+          <div class="card-header has-icon"><i class="ti-bar-chart text-danger" aria-hidden="true"></i></div>
+          <div class="card-body px-4 py-3">
+            <h5 class="mb-3 card-title text-dark">{{comment.Name}}</h5>
+            <p class="subtitle">{{comment.your_comment}}</p>
+          </div>
         </div>
-    </div>
+      </div>
     {% endfor %}
 
-<form action="" method="post"
-class="contact-form col-md-10 col-lg-8 m-auto">
-    {% csrf_token %}
+  
+</section>
 
-    <div class="form-row">
-        <div class="form-group col-sm-6">
-            <input type="text" name='Name' size="50" class="form-control" placeholder="Your-Name" required>
+
+<section style="margin-top: 100px;">
+    <form action="" method="post"
+    class="contact-form col-md-10 col-lg-8 m-auto">
+        {% csrf_token %}
+        <div class="copyright text-left m-top-50 " style="margin-bottom: 40px; margin-left: 20px;">
+            <p class="wow fadeInRight"> Give me lovly comment <i class="fa fa-heart"></i></p>
         </div>
-
-        <div class="form-group col-sm-12">
-            <textarea name="your_comment" id="comment" rows="6" class="form-control"
-                placeholder="Write Your Comment..."></textarea>
+    
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <input type="text" name='Name' size="50" class="form-control" placeholder="Your-Name" required>
+            </div>
+    
+            <div class="form-group col-sm-12">
+                <textarea name="your_comment" id="comment" rows="6" class="form-control"
+                    placeholder="Write Your Comment..."></textarea>
+            </div>
+            <div class="form-group col-sm-12 mt-3">
+    
+                <input type="submit" value="Send-Message" href="{% url 'main:journey'%}"class="btn btn-outline-primary rounded">
+    
+            </div>
         </div>
-        <div class="form-group col-sm-12 mt-3">
-
-            <input type="submit" value="Send-Message" href="{% url 'main:journey'%}"class="btn btn-outline-primary rounded">
-
-        </div>
+    </form>
+    
+    
+    <div class="author_text text-right">
+        <h5>Regards!</h5>
+        <h1>Nada Albati</h1>
     </div>
-</form>
+    
+    
 
+</section>
 
-<div class="author_text text-right">
-    <h5>Regards!</h5>
-    <h1>Nada Albati</h1>
-</div>
-<div class="copyright text-right m-top-80">
-    <p class="wow fadeInRight"> Give me lovly comment <i class="fa fa-heart"></i></p>
-</div>
 
 {% endblock %}
