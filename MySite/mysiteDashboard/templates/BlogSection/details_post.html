@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Details {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{ posts.title }}</h1>
+    <img style="width:300px" src=" {{ posts.image.url}}" alt="">
+    <hr>
+  <h6> {{ posts.publish_date}} </h6>
+  <p><h5>{{posts.content}}</h5> </p>
+  <a href="{% url 'url_dashboard:update_post' posts.id %}" class="btn btn-primary">Update</a>
+  <a href="{% url 'url_dashboard:delate_post' posts.id %}" class="btn btn-danger">delete</a>
+</div>
+<br>
+
+{% endblock %}

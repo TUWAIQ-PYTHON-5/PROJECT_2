@@ -1,0 +1,225 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block title %} {% endblock %}
+
+{% block content %}
+
+<style>
+    .my-custom-scrollbar {
+position: relative;
+height: 400px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+width: auto;
+}
+
+.marg{
+    margin: 2px;
+}
+</style>
+ 
+<div class="container text-center " style="margin-right: 100px; overflow: hidden;">
+    <div class="table-responsive "  >
+        <div class="table-wrapper ">
+            <div class="table-title">
+                <div style="color: brown;" class="col-sm-4"><h2><b>Home Details</b></h2></div>
+                <div class="row">
+                    
+                </div>
+            </div>
+            <table class=" table-bordered  table-responsive">
+                <thead>
+                    <tr>
+                        <th>image</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    
+            <tr>
+                <th scope="row "> {{ result1.title }} </th>
+                <td><img class="m-2" style="width:150px " src="{{result1.image.url}}"></td>
+                <td>{{result1.description}}</td>
+                <td><a  href="{% url 'url_dashboard:main_edit' result1.id %}" class="btn btn-info m-2">Details</a></td>
+                
+            </tr>
+            <tr>
+                <th scope="row "> {{ result2.title }} </th>
+                <td><img class="m-2" style="width:150px" src="{{result2.image.url}}"></td>
+                <td>{{result2.description}}</td>
+                <td><a  href="{% url 'url_dashboard:main_edit' result2.id %}" class="btn btn-info m-2">Details</a></td>
+            </tr>
+            <tr>
+                <th scope="row "> {{ result3.title }} </th>
+                <td><img class="m-2" style="width:150px;" src="{{result3.image.url}}"></td>
+                <td>{{result3.description}}</td>
+                <td><a  href="{% url 'url_dashboard:main_edit' result3.id %}" class="btn btn-info m-2">Details</a></td>
+            </tr>     
+            </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="table-responsive table-wrapper ">
+    
+        <div class="container  text-center  " style="margin-right: 100px;">
+            
+            <table class="table-responsive-auto table-wrapper table-bordered  " >
+               
+                <thead>
+                    <tr>
+                     <th><b><h4>Services</h4></b></th>
+                     <th><b><h4>Content</h4></b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for service in services  %}
+                    <tr>
+                        <td><div class="m-2">{{ service.title }}</div></td>
+                        <td>{{ service.service_content }}</td>
+                        <td>
+                            <a href="{% url 'url_dashboard:update_service' service.id %}" class="btn btn-danger m-2">Edit</a>
+        
+                        </td>
+                 </tr>
+                 {% endfor %}
+                 
+             </tbody>
+            </table>
+         </div> 
+    </div>
+    <hr>
+    <div class="table-wrapper ">
+        
+        <div class="row ">
+            
+            <div class="col-6">
+  
+          <table class="table-bordered ">
+              <thead>
+                  <tr>
+                      <th scope="">Name</th>
+                      <th scope="">Email</th>
+                      <th scope="" >Phone</th>
+                      <th scope="" >-</th>
+                      
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {% for contact in contacts  %}
+                    <tr>
+                        
+                        <td><div class="m-2">{{contact.name}}</div></td>
+                        <td><div class="m-2">{{contact.email}}</div></td>
+                        <td><div class="m-2">{{contact.Phone}}</div></td>
+                        <td><a href="{% url 'url_dashboard:delate_contact' contact.id %}"><i style="color: rgb(217, 7, 7);" class="fas fa-trash m-2"></i></a></td>
+                        </tr>
+                        
+                        {% endfor %}
+                        
+                        
+                    </tbody>
+                    
+                </table>
+                
+            </div>
+            <div class="col-6">
+                <table class="table-bordered table-responsive">
+                    <thead>
+                        
+                        <th scope="col">Title</th>
+                        <th scope="col">Content</th>
+                        <th scope="col" >Image</th>
+                    </thead>
+                    <tbody>
+                        
+                    <tr>
+                        
+                        <td><div class="m-2">{{about_result.title}}</div></td>
+                        <td><div class="m-2">{{about_result.about_content}}</div></td>
+                        <td><img class="m-2" style="width:150px" src="{{about_result.image.url}}"></td>
+                          <td><a href="{% url 'url_dashboard:update_about' %}"><i style="color: rgb(253, 211, 0);" class="fas fa-pen m-2"></i></a></td>
+                        </tr>
+                        
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+  
+<hr>
+    
+    <div class="container text-center pb-5" style="margin-right: 100px; ">
+        
+        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+            <div class="table-wrapper table-bordered table-striped mb-0">
+                <h2>Blog</h2>
+                <div style="margin-left: 90%;">   
+                    <a href="{% url 'url_dashboard:add_post'%}"><p><i class="fas fa-plus "  style="color: rgb(44, 197, 44); size: 30px; "></i></p></a>
+                </div>
+                <div class="table-title">
+                    <div class="row">
+                        
+                    </div>
+                    <table class="table table-responsive ">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Title</th>
+                                <th scope="col" >Content</th>
+                                <th scope="col">Date</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for post in postsID  %}
+                            <tr>
+                                <th scope="row "></th>
+                                <td><img style="width:50px" src="{{post.image.url}}"></td>
+                    <td><a href="{% url 'url_dashboard:details_post' post.id %}"><h6> {{ post.title }} </h6></a></td>
+                    
+                    <td >
+                        <div style="font-size: 10px;"> 
+                            
+                            {{post.content}}
+                        </div>
+                    </td>
+                    <td>{{post.publish_date}}</td>
+                </tr>
+            
+                {% endfor %}
+                
+                
+            </tbody>
+        </table>  
+        
+        </div> 
+        
+    </div>
+    
+    </div>
+    
+     
+   
+
+</div>
+
+
+
+
+
+
+{% endblock %} 

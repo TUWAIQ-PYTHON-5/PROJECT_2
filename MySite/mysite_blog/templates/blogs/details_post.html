@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Details {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{ details.title }}</h1>
+    <img style="width:300px" src=" {{ details.image.url}}" alt="">
+    <hr>
+  <h6> {{ details.publish_date}} </h6>
+  <p><h5>{{details.content}}</h5> </p>
+</div>
+{% endblock %}
