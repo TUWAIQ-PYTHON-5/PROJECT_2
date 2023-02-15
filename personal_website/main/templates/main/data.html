@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block body %}
+<body class="body_a">
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <div class="container-fluid nav-pills">
+        <img src="{% static 'img/web12.png' %}" class="rounded-circle" style="width: 130px " >
+        
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:home_page' %}">Home</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:skills_page' %}">Skills</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:about_page' %}">About</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:contant_page' %}">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+    
+   
+    
+    </div>
+    {% for data in result %}
+    <div class="container col-5" style="color: #f44336;">
+        <div style="color:rgb(16, 15, 15); background-color: rgba(118, 99, 99, 0.488);" class="p-4 shadow" >
+            <ul class="list-group list">
+                <li class="list-group-item"><h6>name : {{data.name}}</h6></li>
+                <li class="list-group-item"><h6>phone :{{data.phone}}</h6></li>
+                <li class="list-group-item"><h6>email :{{data.email}}</h6></li>
+                <li class="list-group-item"><h6>message :{{data.message}}</h6></li>
+            </ul>
+        </div>
+</div>
+
+
+
+{%endfor%}
+</body>
+
+
+{% endblock %}

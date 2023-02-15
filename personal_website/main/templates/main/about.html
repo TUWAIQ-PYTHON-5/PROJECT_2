@@ -1,0 +1,112 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block body %}
+<body class="body_a">
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <div class="container-fluid nav-pills">
+        <img src="{% static 'img/web12.png' %}" class="rounded-circle" style="width: 130px " >
+        
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:home_page' %}">Home</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:skills_page' %}">Skills</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:about_page' %}">About</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:contant_page' %}">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+    <div class="container p-5 my-5 border text-white rounded bg-dark "style=" font-family: 'ABeeZee';font-size: 20px; ">
+          <h1>ِAbout me</h1> 
+          <p>I am Muhammad Al-Saleh, I am a talented, ambitious and hardworking person, and I have extensive skills and experience that I gained through my education at Tuwaiq Academy in developing websites using the Python language and its means through the topics I learned daily during the training period as well as experimental projects. Moreover, I am able to handle multiple tasks on a daily basis efficiently and well, as I learned the topics below..</p> 
+          <h1>Python</h1>
+          <p>I made the decision to learn the Python language, and I did not have much knowledge in it, but with practices and research on it, it became clear to me that it is an easy-to-understand and versatile language, and at the same time you can do some interesting things, whether you are a developer and have some programming knowledge. relating to it..</p>
+          <h1>HTML</h1>
+          <p>HTML is the standard programming language for creating web (internet) pages.
+           HTML stands for Hyper Text Markup Language (Hyper Text Markup Language) to code and write a programming language that describes the external structure of web pages, describes the building blocks of web pages, marks web page elements with HTML tags, and labels parts of a page's content, such as headings, paragraphs, tables, and more.
+           * Web browsers do not display HTML tags, but use HTML to display page content.</p>
+          <h1>CSS</h1>
+          <p>It is the language that is shaped by the aesthetic appearance of the pages, the height and width of the elements in the web page, and controls the layout of the page, so CSS controls the design elements like HTML
+           CSS transforms solid web pages with static content into vibrant pages by giving an aesthetic appearance to page elements using colors, spacing, fonts, and animated elements. In short, CSS identifies some HTML elements and then selects some properties that can be applied to these elements. Each property has value be determined.</p>
+          <h1>Django</h1>
+          <p>Django is a high-level Python web framework that enables rapid development of maintainable websites. A framework is nothing more than a set of modules that make development easier. The news source is consistent, from writing the code from scratch. Django is free and open source (open source), diverse in a thriving and active community, great documentation (documentation), many options for free and paid support.
+            In simple terms, Django is a collection of ready-made components that help you quickly build websites with a functional and clean architecture. When designing websites, developers often need the same components for tasks like authenticating users, uploading files, implementing content management systems, etc.</p>
+        </div>
+    </div>
+    <br><br><br>
+    
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="#!"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-facebook"></i></a>
+        
+              <!-- Twitter -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://twitter.com/?lang=ar"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-twitter"></i></a>
+        
+              <!-- Google -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://www.google.com.sa/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-google"></i></a>
+        
+              <!-- Instagram -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://www.instagram.com/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-instagram"></i></a>
+        
+              <!-- Linkedin -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://www.linkedin.com/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-linkedin"></i></a>
+              <!-- Github -->
+              <a
+                class="btn btn-link btn-floating btn-lg text-dark m-1"
+                href="https://github.com/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-github"></i></a>
+              </section>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    
+    </body>
+
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

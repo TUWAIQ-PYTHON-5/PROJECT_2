@@ -1,0 +1,161 @@
+{% extends 'main/base.html' %}
+
+
+{% load static %}
+{% block body %}
+<body class="body_d">
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <div class="container-fluid nav-pills">
+        <img src="{% static 'img/web12.png' %}" class="rounded-circle" style="width: 130px " >
+        
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:home_page' %}">Home</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:skills_page' %}">Skills</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:about_page' %}">About</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:contant_page' %}">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+<div class="container p-4 my-5 bg-light">
+    <div class="d-flex">
+        <div class="flex-shrink-0">
+          <img src="{% static 'img/tuwaiq.jpg' %}" width="200" height="220">
+        </div>
+        <div class="flex-grow-1 ms-3" style=" font-family: 'ABeeZee';font-size: 24px; ">
+          <p>Tuwaiq Academy offers a high level of technology training programs in programming, software engineering, data science and cyber security. , and seeks to develop the skills of individuals in the fields of information technology and provide them with new experiences, as I joined it and acquired from it learning the Python programming language, which is the most popular programming language in our time. As well as HTML, CSS, and Django.</p>
+        </div>
+      </div>
+</div>
+
+<div class="container"> 
+
+    <div class="row mt-5">
+
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/python_.jpg' %}" height="240" class="card-img-top" alt="..." />
+                <div class="card-body">
+                <h5 class="card-title">python</h5>
+                <p>fundmentals of python object orianted Programming (OOP)</p>
+            </div>
+            </div>  
+        </div>
+
+
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/HTML.jpg' %}" height="240" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">HTML</h5>
+                <p>build full page with HTML tags</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/css.jpg' %}" height="242" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">CSS</h5>
+                <p>design and modifaiy HTML page with CSS styling and animation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/django.png' %}" height="242" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Django</h5>
+                <p>full stak developer working with both front end and back end </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</div>
+
+<br><br><br>
+<footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-facebook"></i></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://twitter.com/?lang=ar"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-twitter"></i></a>
+      
+            <!-- Google -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.google.com.sa/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-google"></i></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.instagram.com/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-instagram"></i></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://www.linkedin.com/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-linkedin"></i></a>
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-dark m-1"
+              href="https://github.com/"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="bi bi-github"></i></a>
+          </section>
+    </div>
+    <!-- Copyright -->
+  </footer>
+          
+ </body>
+      
+
+{% endblock %}
+
+
+
+
+    
+    
+   
+    
+    
+   
+
+    
+
