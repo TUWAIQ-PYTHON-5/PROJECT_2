@@ -15,8 +15,6 @@ def display(request : HttpRequest):
     return render(request , "blogs/blog.html" , context )
 
 
-
-
 def detail_post(request : HttpRequest , post_id ):
     
     details = Posts.objects.get(id = post_id)

@@ -15,17 +15,11 @@ def info(request : HttpRequest):
     con = Contact.objects.all()
     service = Services.objects.all()
     about_index = about[0]
-    
     for i in result:
-        if i.pk == 1:
             f_content = result[0]
-        elif i.pk == 2:
             s_content = result[1]
-        elif i.pk == 3:
             t_content = result[2]
-    
-    context =  {
-        
+    context =  { 
     "result1" : f_content ,
     "result2" : s_content ,
     "result3" : t_content ,
@@ -36,7 +30,6 @@ def info(request : HttpRequest):
     
     }
             
-    
     return render(request , "dashboards/dashboard.html" , context )
 
 
@@ -44,8 +37,6 @@ def info(request : HttpRequest):
 def detail_main(request : HttpRequest , detail_id):
     
         details = MainModel.objects.get(id = detail_id)
-        
-    
         return render(request, "AppSection/details_main.html", {"detail" : details})
 
 
@@ -124,17 +115,6 @@ def delete_post(request : HttpRequest, details_id):
     post = Posts.objects.get(id=details_id)
     post.delete()
     return redirect("url_dashboard:info_dashboard")
-
-
-
-def search(request : HttpRequest):
-
-    if request.method == "GET": 
-
-            post_name =  request.GET.get('search')      
-            search_post = Posts.objects.filter(title__contains = post_name)
-               
-            return render(request , "blogs/search.html" , {"search_post" : search_post})
 
 
 
