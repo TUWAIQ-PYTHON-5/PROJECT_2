@@ -1,0 +1,31 @@
+{% extends 'main/base2.html' %}
+{% load static %}
+
+{% block title  %} Messages {% endblock %}
+{% block style %} <link rel="stylesheet" href="{% static 'style/contact.css'%}">{% endblock %}
+
+
+{% block content %}
+
+    {% for message in messages %}
+        <div class="p-4 shadow rounded" >
+
+            <div style="margin-left: 400px;" class="box">
+                <div class="name">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" value="{{ message.name }}"  placeholder="Name" id="name" readonly>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" value="{{ message.email }}" name="email" placeholder="Email" id="email" readonly>
+                </div>
+                <div class="message-box">
+                    <textarea id="msg" cols="30" rows="10" name="message" placeholder="Message" readonly>{{ message.message }}</textarea>
+                </div>
+                <div class="m-3 d-flex gap-2"><a href="{% url 'main:delete_page' message.id %}" class="btn btn-danger">Delete</a></div> 
+             
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
