@@ -2,54 +2,38 @@
 {% load static %}
 
 {% block title %} Contact {% endblock %}
+{% block style %} <link rel="stylesheet" href="{% static 'style/contact.css'%}">{% endblock %}
 
 {% block content %} 
 
-<div class="col">
-    
-            <header class="shadowBack me-d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                    
-                
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="{% url 'main:homepage' %}" class="nav-link px-5 link-secondary">Home</a></li>
-                <li><a href="{% url 'main:projects_page' %}" class="nav-link px-5 link-dark">My Projects</a></li>
-                <li><a href="{% url 'main:about_me_page' %}" class="nav-link px-5 link-dark">About Me</a></li>
-                <!-- <li><a href="{% url 'main:contact_me_page'%}" class="nav-link px-5 link-dark">Contact</a></li> -->
-            </ul>
-            
-            </header>
+    <div  class="container-box d-flex w-100 justify-content-center align-items-center" >
+      <form action="" method="post" style="padding-top: -200px;" class="needs-validation" novalidate>
+        {% csrf_token %}
+            <div class="box">
+                <h3>Get in Touch</h3>
+                <div class="name has-validati on" >
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Name" id="name" required minlength="5">
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                </div>
+                <div class="email has-validation">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" id="email" required >
+                    <div class="invalid-feedback">
+                      Please enter a vaild username.
+                    </div>
+                </div>
+                <div class="message-box has-validation">
+                    <textarea id="msg" cols="30" rows="10" name="message" placeholder="Message"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit" id="send" >Send</button>
+                </div>
+            </div>
+    </form>
 
-    </div> 
-    
-    <div class="row">
-
-        <div class="full-height">
-    
-            <header class="contact_header">Contact Me</header>
-        
-        <form action="" method="post" id="form" class="topBefore">
-          {% csrf_token %}
-                
-                  <input id="name" name="name" type="text" placeholder="NAME">
-                  <input id="email" name="email" type="text" placeholder="E-MAIL">
-                  <textarea id="message" name="message" type="text" placeholder="MESSAGE"></textarea>
-                  
-          <input id="submit" type="submit" value="GO!">
-          
-        </form>
-        
-        </div>
-
-    </div>
-  
-
-
-</div>
-
-
-
-  
-
-
+  </div>
 
 {% endblock %}

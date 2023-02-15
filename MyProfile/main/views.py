@@ -21,6 +21,7 @@ def contact_me(request : HttpRequest):
     if request.method == "POST":
         new_message = Message(name=request.POST["name"], email= request.POST["email"], message= request.POST["message"])
         new_message.save()
+
     return render(request, "main/contact_me.html")
 
 def messages( request : HttpRequest):
@@ -30,6 +31,10 @@ def messages( request : HttpRequest):
     return render(request, "main/messages.html", context)
 
 def delete_message(request : HttpRequest, message_id):
+    
     message = Message.objects.get(id=message_id)
     message.delete()
     return redirect("main:messages_page")
+
+def successfully_message(request : HttpRequest):
+    return render(request, "main/successfully_message.html")

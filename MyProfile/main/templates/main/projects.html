@@ -16,21 +16,7 @@
                 <source src="{% static 'video/ProjectsBackground5.mp4' %}" type="video/mp4" />
             </video>
             <div  class="caption">
-
-    
-                    <header style="margin-top: 0; width: 98% ;" class="shadowBack me-d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                            
-                        
-                    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="{% url 'main:homepage' %}" class="nav-link px-5 link-secondary">Home</a></li>
-                        <!-- <li><a href="{% url 'main:projects_page' %}" class="nav-link px-5 link-dark">My Projects</a></li> -->
-                        <li><a href="{% url 'main:about_me_page' %}" class="nav-link px-5 link-dark">About Me</a></li>
-                        <li><a href="{% url 'main:contact_me_page'%}" class="nav-link px-5 link-dark">Contact</a></li>
-                    </ul>
-
                     
-                    </header>
-  
                   <!-- mt-1 -->
                   <h1 class="shadowBack " style="color: white; margin: 150px 0 0 480px; width: 30%; align-items: center;">My Projects</h1>
 
@@ -46,7 +32,7 @@
                         <div class="face face2">
                             <div class="content">
                                 <p>Vehicle Tracking System(VTS): System can track the location of the vehicles then send details about the driver to the admin.</p>
-                                    <a href="#">Read More</a>
+                                    <a href="#project1">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +47,7 @@
                         <div class="face face2">
                             <div class="content">
                                 <p>Visualization of data correlation(VDC): A web application that seeks to simplify data by displaying it in simple charts</p>
-                                    <a href="#">Read More</a>
+                                    <a href="#project2">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +62,7 @@
                         <div class="face face2">
                             <div class="content">
                                 <p>A web application - a regular online store- The goal of this project is to learn and use Trello.</p>
-                                    <a href="#">Read More</a>
+                                    <a href="#project3">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -91,62 +77,115 @@
     <div class="row2" style="margin-top: 100vh; background-color: white;width: 100vw;background: white !important; transform: translate(0px, 0px);">
 
         
-    <div class='cardRow2'>
-        <input checked='checked' id='rad1' name='rad' type='radio'>
-        <div for='rad1'>
-          <h1>1</h1>
-          <div class='btn'></div>
+    <div class='cardRow2' >
+        <br>
+        
+
+                        
+        <div id="container" >		
+            <div class="product-details" id="project1">	
+                <h1>Vehicle Tracking System</h1>
+                
+                <p class="information">System to track location of the vehicle and  send details about the driver to the admin. The system can be implemented in call taxi to find out the location of the driver driving the vehicle and will help the admin to allocate taxi to the customer. 
+                         It should work with all devices that can access the browser</p>		
+            </div>
+        
+        <div class="product-image">
+            
+            <div class="row" style="height: 50%;">
+                <img src="{% static 'images/VTC1.jpg' %}" alt="">
+
+            </div>
+            <div class="row" style="height: 50%;">
+                <img src="{% static 'images/VTC2.jpg' %}" alt="">
+
+            </div>            
+
+            <div class="info">
+                <h2>Tools & Technology</h2>
+                <ul>
+                    <li>word processor</li>
+                    <li>Draw.io</li>
+                    <li>Axure RP</li>                
+                </ul>
+            </div>
         </div>
-        <input id='rad2' name='rad' type='radio'>
-        <div for='rad2'>
-          <h1>2</h1>
-          <div class='btn'></div>
+
         </div>
-        <input id='rad3' name='rad' type='radio'>
-        <div for='rad3'>
-          <h1>3</h1>
-          <div class='btn'></div>
+
+        <div id="container" >		
+            <div class="product-details" id="project2">	
+                <h1>Visualization of data correlation</h1>
+                
+                <p class="information">A web application that seeks to simplify data by displaying it in simple charts, making it easy to identify correlations between individual attributes. 
+                    All of this is accomplished by letting the user to: create a dataset, define a population, and define a query to retrieve population information.</p>		
+            </div>
+        
+        <div class="product-image">
+            <div class="row" style="height: 50%;">
+                <img src="{% static 'images/VDC2.png' %}" alt="">
+
+            </div>
+            <div class="row" style="height: 50%;">
+                <img src="{% static 'images/VDC3.png' %}" alt="">
+
+            </div>
+            
+            
+
+            <div class="info">
+                <h2>Tools & Technology</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Node.js</li>
+                    <li>MongoDB</li>
+                    <li>word processor</li>
+                    
+                </ul>
+            </div>
         </div>
-        <input type='checkbox'>
-        <a>Read More</a>
-        <p>Phasellus nec sem in justo pellentesque facilisis. In hac habitasse platea dictumst. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-        <div class='shapes'></div>
-        <div class='photo'>
-          <div></div>
-          <div></div>
-          <div></div>
+
         </div>
-        <div class='blob'>
-          <div class='glob'></div>
+
+        <div id="container">		
+            <div class="product-details" id="project3">	
+                <h1>Online Store</h1>                  
+                <p class="information">A web application - a regular online store- The goal of this project is to learn and use Trello.</p>		
+            </div>
+            
+            <div class="product-image">
+                
+                <div class="row" style="height: 50%;">
+                    <img src="{% static 'images/OSH1.png' %}" alt="">
+
+                </div>
+                <div class="row" style="height: 50%;">
+                    <img src="{% static 'images/OSH2.png' %}" alt="">
+
+                </div>               
+
+                <div class="info">
+                    <h2>Tools & Technology</h2>
+                    <ul>
+                        <li>Trello</li>
+                        <li>Agile Development</li>
+                        <li>Scrum</li> 
+                        <li>wordpress</li>                      
+                    </ul>
+                </div>
+            </div>
         </div>
+
+        <br>
+
+
+
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-      <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-      </filter>
-      </defs>
-      </svg>
-      <svg class="svg" viewBox="0 0 400 400">
-      <defs>
-      <filter id="duotone-filter-post-one">
-      <feColorMatrix type="matrix" values="0.14453125 0 0 0 0.33203125 0.71875 0 0 0 0.27734375 -0.34765625 0 0 0 0.73046875 0 0 0 1 0"></feColorMatrix>
-      </filter>
-      </defs>
-      </svg>
-      
     
 
     </div>
 </div>
-
-
-
-
-
-
-
 
 {% endblock %}
