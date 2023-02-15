@@ -1,0 +1,258 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+
+
+  {% endblock %}
+
+{% block web %}
+
+
+    <!--Main Navigation-->
+    <header>
+      <style>
+        /* Carousel styling */
+        #introCarousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item.active {
+          height: 100vh;
+        }
+
+        .carousel-item:nth-child(1) {
+          background-image: url('https://img.freepik.com/premium-photo/wave-connection-network-dots-innovative-creation_31965-10238.jpg?w=900');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+        .carousel-item:nth-child(2) {
+          background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+        .carousel-item:nth-child(3) {
+          background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+          #introCarousel {
+            margin-top: -58.59px;
+          }
+          #introCarousel,
+          .carousel-inner,
+          .carousel-item,
+          .carousel-item.active {
+            height: 50vh;
+          }
+        }
+
+        .navbar .nav-link {
+          color: #fff !important;
+        }
+      </style>
+
+     
+
+      <!-- Carousel wrapper -->
+      <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+          <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+          <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+        </ol>
+
+        <!-- Inner -->
+        <div class="carousel-inner">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white text-center">
+                  <h2>You can place here any content</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div
+              class="mask"
+              style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(29, 236, 197, 0.7),
+                  rgba(91, 14, 214, 0.7) 100%
+                );
+              "
+            >
+              <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white text-center">
+                  <h2>And cover it with any mask</h2>
+                  <a
+                    class="btn btn-outline-light btn-lg m-2"
+                    href="https://mdbootstrap.com/docs/standard/content-styles/masks/"
+                    target="_blank"
+                    role="button"
+                    >Learn about masks</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inner -->
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- Carousel wrapper -->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="mt-5">
+      <div class="container">
+        <!--Section: Content-->
+        <section>
+          <div class="row">
+            <div class="col-md-6 gx-5 mb-4">
+              <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                <img src="https://neilpatel.com/wp-content/uploads/2019/11/como-funciona-o-networking-marketing-no-brasil.jpeg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 gx-5 mb-4">
+              <h4><strong>Who is Sultan Al-Shahrani?</strong></h4>
+              <p class="text-muted">
+                Graduated from King Khalid University, majoring in Networks and Communications Engineering, with a Bachelor’s Degree in 2022.
+              </p>
+              <p><strong>Courses, experiences and training</strong></p>
+              <p class="text-muted">
+                During the university period, I took some courses such as Arduino and an introduction to cybersecurity, and I had training in the communications wing of the Ministry of Interior for a month. After graduation, I was employed in the Bitur company for three years, after which I joined the Tuwaiq camp.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--Section: Content-->
+
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+          <h4 class="mb-5"><strong>my project</strong></h4>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="https://www.researchgate.net/profile/Narcis-Cardona/publication/235900793/figure/fig5/AS:668497419964431@1536393613622/Schematic-of-a-Wireless-Body-Area-network-for-e-health-application.png"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Design</h5>
+                  <p class="card-text">
+                    Health monitoring system, which are sensors placed in the person and analyze the person's health indicators using the local network.
+                  </p>
+                  <a href="https://www.waves.intec.ugent.be/research/wireless-body-area-networks" class="btn btn-primary">WBAN</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="https://ars.els-cdn.com/content/image/1-s2.0-S0924424720306361-fx1.jpg"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">sensors</h5>
+                  <p class="card-text">
+                    In my project, I used three types of sensors that are important for health monitoring, a temperature sensor, a blood pressure sensor, and a heart rate sensor.
+                  </p>
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924424720306361" class="btn btn-primary">sensors</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="https://png.pngtree.com/illustrations/20190321/ourmid/pngtree-hospital-doctors-patient-cartoon-png-image_32768.jpg"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">The aim of the project</h5>
+                  <p class="card-text">
+                    Continuous monitoring of the patient's health status and speed in saving him, especially the elderly who have chronic diseases who need care.
+                  </p>
+                  <a href="https://www.intechopen.com/chapters/9103" class="btn btn-primary">reference</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
