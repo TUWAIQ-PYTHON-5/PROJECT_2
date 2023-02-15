@@ -27,7 +27,7 @@
  }
  .card1:hover {
    height: 450px;
-   width:550px;
+   /* width:550px; */
 }
 .imgBx
 {
@@ -118,7 +118,7 @@
     justify-content: space-between;
     
 }
-.card1 .content .details .actionBtn a button
+/* .card1 .content .details .actionBtn a button
 {
     padding: 10px 30px;
     border-radius: 5px;
@@ -126,11 +126,11 @@
     outline: none;
     font-size: 1em;
     font-weight: 500;
-    background: #000000;
+    background: #000000; */
     /* background: #8b0f0f; */
-    color: #fff;
+    /* color: #fff;
     cursor: pointer;
-}
+} */
 /* .card1 .content .details .actionBtn button:nth-child(2) */
 /* .card1 .content .details .actionBtn a button:nth-child(1)
 {
