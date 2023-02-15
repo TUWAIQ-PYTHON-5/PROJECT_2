@@ -1,0 +1,22 @@
+{% extends 'my_website/basec.html' %}
+
+{% block title %} ABOUT ME {% endblock %}
+
+{% block content %}
+{%load static%}
+<div class="container">
+  <div class="row">
+        <div class="col">
+            <img src="{% static 'images/about.jpg' %}" class="rounded float-left" style="width: 200px;" alt="about">
+        </div>
+        <div class="col">
+            <p>Hi I’m Atheer I love drawing some caricature and make some logos </p>
+        </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+

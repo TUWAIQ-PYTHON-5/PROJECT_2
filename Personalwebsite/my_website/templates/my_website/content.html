@@ -1,0 +1,79 @@
+{% extends 'my_website/basec.html' %}
+
+{% block title %}CONTENT{% endblock %}
+{% block content %}
+<style>
+    .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;}
+
+    .container:hover .image {opacity: 0.3;}
+    .container:hover .middle {opacity: 1;}
+</style>
+
+{%load static%}
+<table class="table">
+
+    <tbody>
+        <tr>
+            <th colspan="3">logos</th>
+        </tr>
+        <tr>
+          <td>
+              <a href="{% static 'images/logo.png' %}" download>
+                  <div class="bg-image hover-overlay">
+                      <img src="{% static 'images/logo.png' %}" class="image" style="width: 200px;" alt="logo">
+                  </div>
+              </a>
+
+          </td>
+
+          <td>
+              <a href="{% static 'images/logoburger.png' %}" download>
+                  <img src="{% static 'images/logoburger.png' %}" class="img-fluid" style="width: 200px;" alt="logoburger">
+              </a>
+          </td>
+
+          <td>
+              <a href="{% static 'images/honey.png' %}" download>
+                  <img src="{% static 'images/honey.png' %}" class="img-fluid" style="width: 200px;" alt="honey">
+              </a>
+          </td>
+        </tr>
+        <tr>
+            <th colspan="3">caricature</th>
+        </tr>
+        <tr>
+
+            <td>
+              <a href="{% static 'images/crcketer.jpg' %}" download>
+                  <img src="{% static 'images/crcketer.jpg' %}" class="img-fluid" style="width: 200px;" alt="crcketer">
+              </a>
+            </td>
+
+            <td>
+              <a href="{% static 'images/crcketer-two.jpg' %}" download>
+                  <img src="{% static 'images/crcketer-two.jpg' %}" class="img-fluid" style="width: 200px;" alt="crcketer-two">
+              </a>
+            </td>
+
+            <td>
+              <a href="{% static 'images/animal.jpg' %}" download>
+                  <img src="{% static 'images/animal.jpg' %}" class="img-fluid" style="width: 200px;" alt="animal">
+              </a>
+            </td>
+        </tr>
+      </tbody>
+
+</table>
+
+
+
+{% endblock %}
+
