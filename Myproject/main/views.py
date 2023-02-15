@@ -7,7 +7,7 @@ from .models import Info , Comment
 def index_page(request : HttpRequest):
       if request.method == "POST":
         #to add a new entry
-        new_contact = Info(name= request.POST["name"], your_comment = request.POST["your_comment"])
+        new_contact = Info(name= request.POST["name"], email = request.POST["email"], content = request.POST["content"])
         new_contact.save()
         
 
@@ -34,9 +34,12 @@ def my_journey (request : HttpRequest):
         return redirect("main:journey")
     return render (request,"main/journey.html", {"comments":comments})
 
+
+
 def view(request : HttpRequest):
 
     view = Info.objects.all()
 
     context = {"view" : view}
+    
     return render(request, "main/view.html", context)
