@@ -33,3 +33,10 @@ def my_journey (request : HttpRequest):
         new_comment.save()
         return redirect("main:journey")
     return render (request,"main/journey.html", {"comments":comments})
+
+def view(request : HttpRequest):
+
+    view = Info.objects.all()
+
+    context = {"view" : view}
+    return render(request, "main/view.html", context)
