@@ -1,0 +1,120 @@
+{% extends 'main/base.html' %}
+
+
+{% load static %}
+{% block body %}
+<body class="body_c">
+
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <div class="container-fluid nav-pills">
+        <img src="{% static 'img/web12.png' %}" class="rounded-circle" style="width: 130px " >
+        
+        <div class="collapse navbar-collapse">
+          <div class="navbar-nav">
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:home_page' %}">Home</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:skills_page' %}">Skills</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:about_page' %}">About</a>
+            <a class="navbar-brand m-5 my-3" aria-current="page" href="{% url 'main:contant_page' %}">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav> 
+<div>
+    <div class="container col-5">
+        <form action="{% url 'main:contant_page' %}" class="" method="post">
+            {% csrf_token %}
+
+                <div class="mb-3 mt-3 " >
+                  <label for="uname" class="form-label ">Username:</label>
+                  <input type="text" class="form-control" id="uname" placeholder="Enter username" name="name" required>
+                  <div class="valid-feedback">Valid.
+                  </div>
+                  <div class="invalid-feedback">Please fill out this field.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Phone:</label>
+                  <input type="text" class="form-control" id="Phone" placeholder="Enter Phone" name="phone" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Email:</label>
+                  <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                  <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                 <textarea name="message" class="form-control" placeholder="Your commint here..."></textarea>
+              <button type="submit" class="btn btn-primary mt-4">Submit</button>  
+        </form>
+    </div>
+ </div>
+  
+  
+  <br><br><br><br><br><br>
+<footer class="bg-light text-center text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <section class="mb-4">
+          <!-- Facebook -->
+          <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-facebook"></i></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://twitter.com/?lang=ar"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-twitter"></i></a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.google.com.sa/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-google"></i></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.instagram.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-instagram"></i></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.linkedin.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-linkedin"></i></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://github.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="bi bi-github"></i></a>
+        </section>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+</body>
+
+
+{% endblock %}
+
+
+
+
+
+    
+  
