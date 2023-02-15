@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+<div class="w3-container w3-cyan">
+    <h2>Check User</h2>
+    
+    <div class="w3-row-padding" action="{% url 'main:auth' %}" method="POST">
+        {% csrf_token %}
+        
+        <div class="w3-row-padding">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Username" name="usrname">
+            </div>
+
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Password" name="password">
+            </div>
+
+            <br/>
+            <div class="w3-quarter; p-4">
+            <input type="submit" class="w3-btn w3-white" value="login" />
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+
+{% endblock %}

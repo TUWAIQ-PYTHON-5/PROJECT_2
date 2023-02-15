@@ -1,0 +1,72 @@
+{% extends 'main/base.html' %}
+
+{% block title %} News {% endblock %}
+
+{% block content %}
+
+
+<div class="w3-container w3-green">
+<h2>Write a new News</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <label class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" />
+
+    <label class="form-label">content</label>
+    <textarea class="form-control" name="content"></textarea>
+
+      <br/>
+      <input type="submit" class="w3-btn w3-white" value="Post" />
+
+</form>
+
+</div>
+<hr/>
+<div class="w3-container w3-red">
+    <h2> Delete a News!</h2>
+
+    <div class="row">
+        {% for new in news %}
+            
+            <div class="col-3">
+                <div class="p-4 shadow" >
+                    <a href="{% url 'main:newDetails' new.id %}"><h4>{{ new.title }}</h4></a>
+                    <p>{{ new.content }}</p>
+                    <h6>Date: {{ new.writingDate }}</h6>
+                    <div class="m-3 d-flex gap-2"><a href="{% url 'main:newsDelete' new.id %}" class="btn btn-danger">Delete</a></div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+<hr/>
+<div class="w3-container w3-cyan">
+    <h2>New User</h2>
+    
+    <div class="w3-row-padding" action="{% url 'main:addUser' %}" method="POST">
+        {% csrf_token %}
+        
+        <div class="w3-row-padding">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Username" name="usrname">
+            </div>
+
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Password" name="password">
+            </div>
+
+            <br/>
+            <div class="w3-quarter; p-4">
+            <input type="submit" class="w3-btn w3-white" value="Creat" />
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+   
+{% endblock %}
