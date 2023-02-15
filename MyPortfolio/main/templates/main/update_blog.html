@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block home %}
+
+<!-- HOME -->
+<section id="homeone" data-stellar-background-ratio="0.5">
+    
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-12">
+                   <div class="home-info">
+                        
+                        <br>
+                        <span>
+                             
+                             
+                        </span>
+                   </div>
+              </div>
+              
+         </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block about %}
+{% if user.is_authenticated %}
+
+
+
+
+<section id="contact" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-12 col-sm-12">
+                   <div class="section-title">
+                        <h2>updating Bost : </h2>
+                        <span class="line-bar">...</span>
+                   </div>
+              </div>
+
+              <div class="col-md-8 col-sm-8">
+                
+                   
+                  
+                   <!-- add-bost-form -->
+                   <form id="contact-form" role="form" action="#" method="POST" enctype="multipart/form-data" >
+                        {% csrf_token %}
+                        <div class="col-md-6 col-sm-6">
+                             <input type="text" value="{{ updated_blog.title }}" class="form-control" placeholder="title" id="cf-name" name="title" required="">
+                        </div>
+
+                       
+
+                        <div class="col-md-6 col-sm-6">
+                             <input type="file" class="form-control" value="{{ updated_blog.image }}" placeholder="image" id="cf-number" name="image" required="">
+                        </div>
+
+                       
+
+                        <div class="col-md-12 col-sm-12">
+                             <textarea class="form-control" rows="6"  placeholder="Description" id="cf-message" name="description" required="">{{updated_blog.description}}</textarea>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12">
+                             <input type="submit" class="form-control" name="submit" value="update Bost">
+                        </div>
+
+                   </form>
+              </div>
+              <div class="col-md-12 col-sm-12">
+                {% if messages %}
+                {% for i in messages %}
+                <div class="alert alert-success" role="alert">
+                     {{ i }}
+                   </div>
+                     
+                {% endfor %}
+                {% endif %}
+
+              
+         </div>
+    </div>
+</section>
+{% else %}
+<section id="about" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-5 col-sm-6">
+                   <div class="about-info">
+                        <div class="section-title">
+                             <h2>Access <strong> denied</strong> </h2>
+                             <span class="line-bar">...</span>
+                        </div>
+                        <p>please login to access this  <strong>Service</strong> </p>
+                        <a href="{% url 'main:home_page' %}"  class="btn section-btn smoothScroll">Go Back For Home Page</a>
+                        
+                   </div>
+              </div>
+              </div>
+         </section>
+         
+         {% endif %}
+
+
+         
+
+{% endblock  %}

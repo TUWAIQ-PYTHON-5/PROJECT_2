@@ -1,0 +1,92 @@
+{% extends 'main/base.html' %}
+{& load static &}
+
+{% block home %}
+
+      <!-- HOME -->
+      <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+  
+                    <div class="col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <h1> Login </h1>
+                              <i class="fa-solid fa-do-not-enter"></i>
+                              <h2  style="color: rgb(255, 255, 255);"></h2>
+                              
+                             
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+     
+
+
+     {% endblock %}
+
+
+
+
+
+{% block content %}
+<section id="contact" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                         <h1>Login </h1>
+                         <span class="line-bar">...</span>
+                    </div>
+               </div>
+               
+               <div class="col-md-12 col-sm-12">
+                         {% if messages %}
+                         {% for i in messages %}
+                         <div class="alert alert-danger" role="alert">
+                              {{ i }}
+                            </div>
+                              
+                         {% endfor %}
+                    {% endif %}
+               
+                         <span class="line-bar">...</span>
+                        
+               <div class="col-md-12 col-sm-5">
+                   
+                    <form id="contact-form" role="form" action="#" method="post">
+                         {% csrf_token %}
+                         <div class="col-md-6 col-sm-6">
+                              <input type="text" class="form-control" placeholder="User Name" id="cf-name" name="username" required="">
+                         </div>
+
+                        
+
+                         <div class="col-md-6 col-sm-6">
+                              <input type="password" class="form-control" placeholder=" Password" id="cf-number" name="password" required="">
+                         </div>
+
+                        
+
+                        
+
+                         <div class="col-md-3 col-sm-6">
+                              <input type="submit" class="form-control" name="submit" value="Sign in">
+                         </div>
+
+                    </form>
+               </div>
+
+               </div>
+
+          </div>
+     </div>
+     
+</section>
+{% endblock %}
+
+     

@@ -1,0 +1,126 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block home %}
+
+<!-- HOME -->
+<section id="homeone" data-stellar-background-ratio="0.5">
+    
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-12">
+                   <div class="home-info">
+                        
+                        <br>
+                        <span>
+                             
+                             
+                        </span>
+                   </div>
+              </div>
+              
+         </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block blog %}
+{% if user.is_authenticated %}
+<section  id="SearchBlog" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+ 
+               <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                         <h2>Search Blog : </h2>
+                         <span class="line-bar">...</span>
+                    </div>
+               </div>
+ 
+               <div class="col-md-8 col-sm-8">
+                    
+                   
+                    <!-- SEARCH FORM HERE -->
+                    <form id="contact-form" role="form" action="" method="get">
+                         {% csrf_token %}
+                         <div class="col-md-4 col-sm-6">
+                              <input type="text" class="form-control" placeholder="Search for Blog" id="cf-name" name="Search" required="">
+                         </div>
+                         
+                          
+                     </form>
+                 </div>
+            </div>
+       </div>
+  </section>
+
+<section id="blog" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+          {% if messages %}
+          {% for i in messages %}
+          <div class="alert alert-success" role="alert">
+               {{ i }}
+             </div>
+               
+          {% endfor %}
+          {% endif %}
+
+              <div class="col-md-12 col-sm-12">
+                   <div class="section-title">
+                        <h2>My Blog</h2>
+                        <span class="line-bar">...</span>
+                   </div>
+              </div>
+              {% for i in searches_bost %}
+              <div class="col-md-6 col-sm-6">
+                   <!-- BLOG THUMB -->
+                  
+                   <div class="media blog-thumb">
+                        <div class="media-object media-left">
+                             <a href="#"><img src="{{ i.image.url }}" class="img-responsive" alt=""></a>
+                        </div>
+                        <div class="media-body blog-info">
+                             <small><i class="fa fa-clock-o"></i> {{ i.publish_date }}</small>
+                             <h3><a href="#">{{ i.title }}</a></h3>
+                             <p></p>
+                             <a href="{% url 'main:delete' i.id %}" class="btn section-btn">delete</a> <a href="{% url 'main:update' i.id %}" class="btn section-btn">update</a>
+                        </div>
+                   </div>
+              </div>
+              {% endfor %}
+
+              
+              
+         </div>
+    </div>
+</section>
+
+{% else %}
+
+<section id="about" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-5 col-sm-6">
+                   <div class="about-info">
+                        <div class="section-title">
+                             <h2>Access <strong> denied</strong> </h2>
+                             <span class="line-bar">...</span>
+                        </div>
+                        <p>please login to access this  <strong>Service</strong> </p>
+                        <a href="{% url 'main:home_page' %}"  class="btn section-btn smoothScroll">Go Back For Home Page</a>
+                        
+                   </div>
+              </div>
+              </div>
+         </section>
+         
+         {% endif %}
+
+   
+    {% endblock %}

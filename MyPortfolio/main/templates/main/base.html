@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     {% block title %}<title>Ahmed - portfolio</title>{% endblock %}
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'main/css/magnific-popup.css' %}">
+     <link rel="stylesheet" href="{% static 'main/css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{% url 'main:home_page' %}" class="navbar-brand"><strong style="color:#dd4b39" >A</strong> h m e d</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About</a></li>
+                         <li><a href="#blog" class="smoothScroll">Blog</a></li>
+                         <li><a href="{% url 'main:contact' %}" class="smoothScroll">Contact Me</a></li>
+                         {% if user.is_authenticated %}
+                         <li><a href="{% url 'main:add_blog' %}" class="smoothScroll">add blog</a></li>
+                         {% endif %}
+                         {% if user.is_authenticated %}
+                         <li><a href="{% url 'main:show' %}" class="smoothScroll">control Blog</a></li>
+                         {% endif %}
+                         
+                         {% if user.is_authenticated %}
+                         <li><a href="{% url 'user:logout' %}" class="smoothScroll">Signout</a></li>
+                         {% else %}
+                         <li><a href="{% url 'user:login' %}" class="smoothScroll">Sign In</a></li>
+                         {% endif %}
+
+                         
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="https://github.com/"><i class="fa fa-github" style="font-size: 2rem;"></i></a></li>
+                         <li><a href="https://twitter.com/?lang=ar"><i class="fa fa-twitter" style="font-size: 2rem;"></i></a></li>
+                         <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin" style="font-size: 2rem;"></i></a></li>
+                         
+                         
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+     {% block home %}
+
+      <!-- HOME -->
+      <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+  
+                    <div class="col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <h1>Ahmed Alhisan</h1><h1><strong> I am </strong>Software Engineer</h1>
+                              <a href="{% url 'main:daownload' %}" download="Ahmed.pdf" class="btn section-btn smoothScroll"><i class="fa-solid fa-cloud-arrow-down"></i>Download CV</a>
+                              <br>
+                              <span>
+                                    
+                                   
+                              </span>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+     
+
+     {% endblock %}
+ 
+
+     
+    
+     
+         
+    
+     
+
+   {% block about %}
+
+   {% endblock  %}
+
+
+
+
+   {% block blog %}
+    
+     {% endblock %}
+
+     
+
+
+     {% block content %}
+
+     {% endblock %}
+
+    
+     
+
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="0.5">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-5 col-sm-12">
+                       <div class="footer-thumb footer-info"> 
+                            <h2>Ahmed portfolio</h2>
+                            <p>this is my sipmle portfolio</p>
+                       </div>
+                  </div>
+
+                  
+
+                                  
+
+                  <div class="col-md-12 col-sm-12">
+                       <div class="footer-bottom">
+                            <div class="col-md-6 col-sm-5">
+                                 <div class="copyright-text"> 
+                                      <p>KEEP IN TOUCH</p>
+                                 </div>
+                            </div>
+                            <div class="col-md-6 col-sm-7">
+                                 <div class="phone-contact"> 
+                                      <p>Call me <span> 5076134</span></p>
+                                 </div>
+                                 <ul class="social-icon">
+                                      <li><a href="https://github.com/" class="fa fa-github" attr="github icon"></a></li>
+                                      <li><a href="https://twitter.com/?lang=ar" class="fa fa-twitter"></a></li>
+                                      <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+                                 </ul>
+                            </div>
+                       </div>
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
+
+   <!-- MODAL -->
+   
+   <!-- SCRIPTS -->
+   <script src="{% static 'main/js/jquery.js' %}"></script>
+   <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'main/js/jquery.stellar.min.js' %}"></script>
+   <script src="{% static 'main/js/jquery.magnific-popup.min.js' %}"></script>
+   <script src="{% static 'main/js/smoothscroll.js' %}"></script>
+   <script src="{% static 'main/js/custom.js' %}"></script>
+
+</body>
+</html>

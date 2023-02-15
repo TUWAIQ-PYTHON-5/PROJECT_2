@@ -1,0 +1,104 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+    
+
+{% block home %}
+
+<!-- HOME -->
+<section id="homeone" data-stellar-background-ratio="0.5">
+    
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-12">
+                   <div class="home-info">
+                        
+                        <br>
+                        <span>
+                             
+                             
+                        </span>
+                   </div>
+              </div>
+              
+         </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+{% block blog %}
+<section  id="SearchBlog" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-12 col-sm-12">
+                   <div class="section-title">
+                        <h2>Search Blog : </h2>
+                        <span class="line-bar">...</span>
+                   </div>
+              </div>
+
+              <div class="col-md-8 col-sm-8">
+                   
+                  
+                   <!-- SEARCH FORM HERE -->
+                   <form id="contact-form" role="form" action="" method="get">
+                        {% csrf_token %}
+                        <div class="col-md-4 col-sm-6">
+                             <input type="text" class="form-control" placeholder="Search for Blog" id="cf-name" name="Search" required="">
+                        </div>
+                        
+                         
+                    </form>
+                </div>
+           </div>
+      </div>
+ </section>
+
+<section id="blog" data-stellar-background-ratio="0.5">
+    <div class="container">
+         <div class="row">
+          
+
+              <div class="col-md-12 col-sm-12">
+                   <div class="section-title">
+                        <h2>My Blog</h2>
+                        <span class="line-bar">...</span>
+                   </div>
+              </div>
+              {% for i in searched_blog %}
+              <div class="col-md-6 col-sm-6">
+                   <!-- BLOG THUMB -->
+                  
+                   <div class="media blog-thumb">
+                        <div class="media-object media-left">
+                             <a href="#"><img src="{{ i.image.url }}" class="img-responsive" alt=""></a>
+                        </div>
+                        <div class="media-body blog-info">
+                             <small><i class="fa fa-clock-o"></i> {{ i.publish_date }}</small>
+                             <h3><a href="#">{{ i.title }}</a></h3>
+                             <p></p>
+                             <a href="{% url 'main:show_blog' i.id %}" class="btn section-btn">Read More</a> 
+                        </div>
+                   </div>
+              </div>
+              {% endfor %}
+
+              
+              
+         </div>
+    </div>
+</section>
+
+
+   
+    {% endblock %}
+
+
+
