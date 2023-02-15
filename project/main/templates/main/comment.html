@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+
+{% block title  %} Comment {% endblock %}
+
+
+
+
+{% block headers %}
+ <header class="box-shadow">
+    <div class="section logo">
+      <span class="white">MOH</span><span class="green">Zidani</span>
+    </div>
+
+    <div class="section">
+      <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="{% url 'main:prodect_page' %}">Prodect</a></li>
+        <li><a href="{% url 'main:comment_page' %}">Comment</a></li>
+        <li><a href="{%url 'main:Recommendations_page'%}">Recomm</a></li>
+        <li><a href="{% url 'main:add_comment_page'%}">Add</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
+    
+
+
+
+
+    {% for post in comment %}
+        <div class="cards">
+            <div class="containers">
+            <h3>{{ post.name }}</h3>
+            <h5>{{ post.comment }}</h5>
+            </div>
+        </div>
+    {% endfor %}
+
+
+    
+    
+
+{% endblock %}

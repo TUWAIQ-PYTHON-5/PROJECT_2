@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+
+    
+        
+    
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} welcome {% endblock %}</title>
+    <link  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+.card-tasi {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgb(0, 0, 0);
+   color: white;
+   text-align: center;
+}
+
+
+
+
+
+
+
+.card-p {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.prodect{
+  color: #000;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card-p button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+.cards {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  margin: 15px;
+}
+
+.cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.containers {
+  padding: 2px 16px;
+}
+
+
+
+
+
+label{
+  margin: 5px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px ;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 5px ;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+
+
+
+      .card1 {
+        background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url("{% static 'images/1.jpeg' %}");
+          background-size: cover;
+          background-position: center;
+      }
+      
+      .card2 {
+          background-image: url("{% static 'images/5.jpeg' %}");
+      }
+      .card3 {
+          background-image: url("{% static 'images/2.jpeg' %}");
+      }
+      .card4 {
+          background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url("{% static 'images/4.png' %}");
+          background-size: cover;
+          background-position: center;
+      }
+      /* .card4 {
+          background-image: url("{% static 'images/4.png' %}");
+      } */
+  </style>
+</head>
+<body>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+
+
+
+
+
+    <!-- <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'main:index_page' %}">ZIDANI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">list</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Recommendations</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Products and information</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">comments</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav> -->
+    
+
+
+
+
+    <!-- <img src="{% static 'images/1.jpeg' %}"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+{% block headers %}
+ <header class="box-shadow">
+    <div class="section logo">
+      <span class="white">MOH</span><span class="green">Zidani</span>
+    </div>
+
+    <div class="section">
+      <ul>
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="{% url 'main:prodect_page' %}">Prodect</a></li>
+        <li><a href="{% url 'main:comment_page' %}">Comment</a></li>
+        <li><a href="{%url 'main:Recommendations_page'%}">Recommendations</a></li>
+      </ul>
+    </div>
+  </header>
+{% endblock %}
+ 
+
+    {% block content %}
+
+      
+    {% endblock %}
+
+
+
+    <div class="footer">
+
+      <div style="margin: 24px ;">
+
+    <div class="position">
+      <a href="https://twitter.com/"><i class="fa fa-dribbble"></i></a> 
+      <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>  
+      <a href="https://twitter.com/"><i class="fa fa-linkedin"></i></a>  
+      <a href="https://twitter.com/"><i class="fa fa-facebook"></i></a> 
+  </div>
+  
+  </div>
+  
+
+
+
+      
+    </div>
+  
+
+
+
+
+    
+</body>
+</html>
