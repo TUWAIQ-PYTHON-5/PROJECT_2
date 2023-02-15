@@ -23,7 +23,7 @@
   }
   .contact-form {
     background-color: rgba(190, 190, 190, 1);
-    border: 1px solid blue;
+    border: 1px solid #a9a8a8;
   }
 
   .contact-form div , .contact-form label , .contact-form h1 {
