@@ -5,7 +5,7 @@
 {% block content %}
 
 
-<div class="w3-container w3-green">
+<div class="w3-container w3-white">
 <h2>Write a new News</h2>
 
 <form action="" method="POST">
@@ -18,13 +18,13 @@
     <textarea class="form-control" name="content"></textarea>
 
       <br/>
-      <input type="submit" class="w3-btn w3-white" value="Post" />
+      <input type="submit" class="w3-btn w3-blue" value="Post" />
 
 </form>
 
 </div>
 <hr/>
-<div class="w3-container w3-red">
+<div class="w3-container w3-white">
     <h2> Delete a News!</h2>
 
     <div class="row">
@@ -44,7 +44,7 @@
     </div>
 </div>
 <hr/>
-<div class="w3-container w3-cyan">
+<div class="w3-container w3-white">
     <h2>New User</h2>
     
     <div class="w3-row-padding" action="{% url 'main:addUser' %}" method="POST">
@@ -61,7 +61,7 @@
 
             <br/>
             <div class="w3-quarter; p-4">
-            <input type="submit" class="w3-btn w3-white" value="Creat" />
+            <input type="submit" class="w3-btn w3-blue" value="Creat" />
             </div>
         </div>
     </div>

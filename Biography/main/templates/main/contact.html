@@ -12,6 +12,7 @@
                 <h3 class="mb1">Write to reach me</h3>
             </div>
             <form>
+                {% csrf_token %}
                 <div class="grid-row">
                     <div class="grid-column span-half mt1">
                         <label class="label" for="name">Name</label>
@@ -22,8 +23,6 @@
                         <input class="form-control" id="email" type="email">
                     </div>
                 </div>
-                <label class="label mt1" for="dates">Timeline</label>
-                <input class="form-control" id="dates" type="text">
                 <label class="label mt1" for="message">Message</label>
                 <textarea class="form-control" id="message"></textarea>
                 <div class="align--right mt1">

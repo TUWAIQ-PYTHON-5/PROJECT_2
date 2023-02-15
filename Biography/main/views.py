@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
-from .models import News, Comment , Usr
+from .models import News, Comment , Usr, Msgs
 # Create your views here.
 
 
@@ -44,7 +44,7 @@ def pro(request : HttpRequest):
     return render(request, "main/pro.html")
 ################################################################
 def contact(request : HttpRequest):
-    return render(request, "main/contact.html")
+     return render(request, "main/contact.html")
 ################################################################
 def intell(request : HttpRequest):
     return render(request, "main/intell.html")

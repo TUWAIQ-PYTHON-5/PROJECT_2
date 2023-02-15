@@ -1,10 +1,41 @@
 {% extends 'main/base.html' %}
-
+{% load static %}
 
 {% block content %}
-<div class="container-fluid">
-    ...
-  </div>
+<img src="{% static '/images/lit.webp' %}" alt="Girl in a jacket" style="width:400px;height:350px;">
+<div id="infostrip" style="background:teal;">
+  <h1>My Publication
+    <hr>
+  </h1>
+  <svg class="icon icon-camera">
+    <use xlink:href="#icon-camera">
+      <symbol id="icon-camera" viewBox="0 0 32 32">
+        <title>camera</title>
+        <path d="M9.5 19c0 3.59 2.91 6.5 6.5 6.5s6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5-6.5 2.91-6.5 6.5zM30 8h-7c-0.5-2-1-4-3-4h-8c-2 0-2.5 2-3 4h-7c-1.1 0-2 0.9-2 2v18c0 1.1 0.9 2 2 2h28c1.1 0 2-0.9 2-2v-18c0-1.1-0.9-2-2-2zM16 27.875c-4.902 0-8.875-3.973-8.875-8.875s3.973-8.875 8.875-8.875c4.902 0 8.875 3.973 8.875 8.875s-3.973 8.875-8.875 8.875zM30 14h-4v-2h4v2z"></path>
+      </symbol>
+    </use>
+  </svg>
+  <button><a href="{% static '/images/pdf.pdf' %}">A Framework for the proper implementation, best practices, outlines, and the expected value of the Enterprise Architecture</a></button>
+  <p>For the master dgree research project I did research in the information technology regarding the enterprise architecture:</p>
+  
+</div>
+
+<div id="infostrip" style="background:#7d5056f7;">
+  <h1>Future Work and Literature Review
+    <hr>
+  </h1>
+  <svg class="icon icon-fire">
+    <use xlink:href="#icon-fire">
+      <symbol id="icon-fire" viewBox="0 0 32 32">
+        <title>fire</title>
+        <path d="M10.031 32c-2.133-4.438-0.997-6.981 0.642-9.376 1.795-2.624 2.258-5.221 2.258-5.221s1.411 1.834 0.847 4.703c2.493-2.775 2.963-7.196 2.587-8.889 5.635 3.938 8.043 12.464 4.798 18.783 17.262-9.767 4.294-24.38 2.036-26.027 0.753 1.646 0.895 4.433-0.625 5.785-2.573-9.759-8.937-11.759-8.937-11.759 0.753 5.033-2.728 10.536-6.084 14.648-0.118-2.007-0.243-3.392-1.298-5.312-0.237 3.646-3.023 6.617-3.777 10.27-1.022 4.946 0.765 8.568 7.555 12.394z"></path>
+      </symbol>
+    </use>
+  </svg>
+  <p>Currunt work: The Data Diode to Operate, Maintain, and Protect Airgap Infrastructure</p>
+  <p> In a request for starting a research project I had to review the state of art at the field that I am looking into.</p>
+  <p> The work now is going on : The Data Diode to Operate, Maintain, and Protect Airgap Infrastructure</p>
+</div>
 
 
 {% endblock %}
