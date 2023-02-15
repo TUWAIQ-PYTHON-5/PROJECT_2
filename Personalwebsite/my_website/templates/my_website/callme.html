@@ -1,0 +1,29 @@
+{% extends 'my_website/basec.html' %}
+
+{% block title %} CALL US {% endblock %}
+
+{% block content %}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="forname" name="user_name"/>
+                <label for="forname" >Name</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="foremail" name="email"/>
+                <label for="foremail" >Email</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea type="text" class="form-control" id="formassage" name="massage" ></textarea>
+                <label for="formassage" >Massage</label>
+            </div>
+
+            <input type="submit" value="Send">
+        </form>
+
+
+
+{% endblock %}
