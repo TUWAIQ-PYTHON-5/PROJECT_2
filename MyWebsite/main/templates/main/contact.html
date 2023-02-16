@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} Contact {% endblock %}
+
+{% block content %} 
+
+<style>
+    .full-height{
+        text-align: center;
+        padding: 70px 30px 30px 30px;
+      }
+    .contact_header{
+      text-align: center;
+      padding: 70px 30px 30px 30px;
+    }
+    #name{
+        padding: 15px 15px 15px 15px; }
+    #email{
+        padding: 15px 15px 15px 15px; }
+   
+  </style>
+
+    <div class="row" >
+
+        <div class="full-height">
+    
+            <header class="contact_header">شكرا لتّصفحك ،يسعدني ترك انطباعك في النموذج التّالي </header>
+        
+        <form action="{% url 'main:home_page' %}" method="post" id="form" class="topBefore">
+          {% csrf_token %}
+                
+                  <input id="name" name="name" type="text" placeholder=":اسمك" class="border border-danger">
+                  <input id="email" name="email" type="text" placeholder=":بريدك الالكتروني" class="border border-danger">
+                  <hr>
+
+                  <textarea id="message" name="message" type="text" placeholder="انطباعك" class="border border-danger"></textarea>
+
+<hr>
+
+
+          <input id="submit" type="submit" value="ارسال :)" class="btn btn-danger">
+          
+        </form>
+      </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
