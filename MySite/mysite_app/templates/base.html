@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'main/css/styleSrvice.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+
+
+    <title> Home</title>
+</head>
+<body>
+ 
+  <div class="container-fluid">
+
+    
+  
+    <nav class="navbar navbar-expand-lg  navbar bg-light" data-bs-theme="light" >
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="{% url 'url_main:index_page' %}"><img style="width: 100px;" src="{% static 'img/main/images.png' %}" alt=""></a>
+          <button  class="navbar-toggler"  type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'url_main:index_page' %}">Home</a>
+            </li>
+
+            
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_main:about_page' %}">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_main:contact_page' %}">Contact</a>
+              </li>
+              
+              
+
+              <li class="nav-item">
+                <a class="nav-link " href="{% url 'url_blog:blog_page' %}">Blog</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " style="margin-left: 1000px;" href="{% url 'url_dashboard:info_dashboard' %}">Dash</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      
+</div>
+
+{% block content %}
+
+
+{% endblock %}
+
+<footer class="bg-light text-lg-start">
+   
+
+    <hr class="m-0" />
+
+    <div class="text-center py-4 align-items-center">
+      <p><b>Follow me on social media</b> </p>
+      
+      <a href="https://twitter.com/MDBootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/MJHHaL" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MJHHaL</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>

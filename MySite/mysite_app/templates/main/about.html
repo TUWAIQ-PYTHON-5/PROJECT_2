@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About {% endblock %}
+
+
+
+{% block content %}
+
+<div class="container mt-5">
+
+  
+
+    <section>
+        <div class="row" style="overflow: hidden;">
+          <div class="col-md-3 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img src="{{results.image.url}}" class="img-fluid" />
+              <a href="#!">
+               
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>{{results.title}}</strong></h4>
+            <p class="text-muted">
+              {{results.about_content}}
+            </p>
+         
+          </div>
+        </div>
+      </section>
+    
+</div>
+
+
+
+{% endblock %} 

@@ -1,0 +1,8 @@
+   #intro {
+        background-image: url("{{result.image.url}}");
+        height: 95vh;
+      }
+      
+      
+        /* Height for devices larger than 576px */
+  

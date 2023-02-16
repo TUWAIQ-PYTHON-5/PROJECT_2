@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Details {% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{ detail.title }}</h1>
+    <img style="width:300px" src=" {{ detail.image.url}}" alt="">
+    <hr>
+  <p><h5>{{detail.description}}</h5> </p>
+  <a href="{% url 'url_dashboard:Update_info' detail.id %}" class="btn btn-primary">Update</a>
+</div>
+<br>
+
+{% endblock %}

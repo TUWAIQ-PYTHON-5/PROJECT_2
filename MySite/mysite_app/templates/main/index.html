@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+
+{% block content %}
+
+
+
+<style>
+   #intro {
+        background-image: url("{{content1.image.url}}");
+        height: 95vh;
+      }
+</style>
+
+
+<!-- ------------------------------------------------------------------------------- -->
+ <div class="container-fluid">
+    <div id="intro">
+        <div>
+          <div class="container d-flex align-items-right " style="padding-top: 10%;">
+            <div class="text-white " style="width: fit-content;">
+              <h1 class="mb-3">{{content1.title}}</h1>
+              <h5 class="mb-4">{{content1.description}}</h5>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+
+
+<main class="mt-5" >
+    <div class="container" >
+      <section >
+        <div class="row">
+          <div class="col-md-4 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img style="width: 400px;" src="{{content2.image.url}}" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-7 gx-5 mb-4">
+            <h4><strong>{{content2.title}}</strong></h4>
+            <p class="text-muted">
+              {{content2.description}}
+            </p>
+            
+           
+            </p>
+          </div>
+        </div>
+      </section>
+
+<hr>
+
+      <section>
+        <div class="row">
+            <div class="col-md-6 " >
+                <h4><strong>{{content3.title}}</strong></h4>
+                <p class="text-muted" >
+                  {{content3.description}}
+                </p>
+             
+              </div>
+
+          <div class="col-6 ">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img  style="width: 450px;"src="{{content3.image.url}}" class="img-fluid" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+    
+
+      <hr class="my-5" />
+
+    
+      <section class="text-center" >
+        <h4 class="mb-5"><strong>Frameworks that worked some projects</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://static.gunnarpeipman.com/wp-content/uploads/2019/12/dotnet-core-featured.png" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+             
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://e3arabi.com/wp-content/uploads/2021/04/3654e7e5cd4023d6a65bb172fb178be0.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://www.bleepstatic.com/content/hl-images/2015/11/10/android[1].png" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+  
+      <div class="container">
+
+     
+        <div class="services pd" >
+          <div class="container">
+            <h3 class="title">Services</h3>
+            <div class="row text-center">
+              <div class="col-md-4">
+                <div class="square"><i class="fas fa-code"></i></div>
+                <div class="serv">
+                    
+                    <h5>{{services1.title}}</h5>
+                    <p>{{services1.service_content}}</p>
+                  </div>
+                  
+
+                </div>
+                <div class="col-md-4">
+                  <div class="serv">
+                    <div class="square"><i class="fas fa-cogs"></i></div>
+                    <h5>{{services2.title}}</h5>
+                    <p>{{services2.service_content}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="square"><i class="fas fa-globe"></i></div>
+                  <div class="serv">
+                    <h5>{{services3.title}}</h5>
+                    <p>{{services3.service_content}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+    </div>
+      
+    </div>
+  
+  x
+  </main>
+
+ 
+{% endblock %}
+
+
+
+
+<!--Main Navigation-->
