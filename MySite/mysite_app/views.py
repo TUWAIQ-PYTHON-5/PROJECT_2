@@ -9,16 +9,16 @@ def index(request : HttpRequest):
     result = MainModel.objects.all()
     services = Services.objects.all()
     
-    for i  in result:
-        f_content = result[0] 
-        s_content = result[1]
-        t_content = result[2]
     
-    for i in services:
-            f_service = services[0]
-            s_service = services[1]
-            t_service = services[2]
-        
+    f_content = result[0] 
+    s_content = result[1]
+    t_content = result[2]
+
+
+    f_service = services[0]
+    s_service = services[1]
+    t_service = services[2]
+            
     context = {
         "content1" : f_content,
         "content2" : s_content,
@@ -33,24 +33,11 @@ def index(request : HttpRequest):
 
 
 
-
-def services(request : HttpRequest):
-    
-    
-      
-    context = {
-        "service" :  services
-        }
-
-    return render(request , "main/index.html" , context )
-
-
 def about(request : HttpRequest):
 
     result = About.objects.all().order_by("-id")
-    for i in result:
-        if i.pk == 1:
-            last_content = result[0]        
+    
+    last_content = result[0]        
     context = {
         "results" : last_content,
         }

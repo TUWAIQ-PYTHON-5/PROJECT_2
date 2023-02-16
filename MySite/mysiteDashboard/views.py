@@ -15,10 +15,10 @@ def info(request : HttpRequest):
     con = Contact.objects.all()
     service = Services.objects.all()
     about_index = about[0]
-    for i in result:
-            f_content = result[0]
-            s_content = result[1]
-            t_content = result[2]
+    
+    f_content = result[0]
+    s_content = result[1]
+    t_content = result[2]
     context =  { 
     "result1" : f_content ,
     "result2" : s_content ,
